@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.neengash.unityfeto": {
+      "version": "https://github.com/Neengash/UnityFeTo.git?path=/Assets/FeTo",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f641124291f87aac3c47e35a864d9ae649689c55"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.6",
       "depth": 0,
