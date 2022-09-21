@@ -32,11 +32,9 @@ public abstract class BaseTile : MonoBehaviour
 
     public void MouseLeftClick() {
         // TODO assign mouse
-        print("LeftClick");
     }
 
     public void MouseRightClick() {
-        print("RightClick");
-
+        //TODO implement
     }
 }
