@@ -1,7 +1,7 @@
 public enum GameStates
 {
     Play,
-    Crier,
+    TownCrier,
     Pause,
     GameOver
 }

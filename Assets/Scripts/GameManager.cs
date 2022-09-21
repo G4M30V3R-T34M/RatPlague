@@ -27,7 +27,7 @@ public class GameManager : Singleton<GameManager>
                     UpdateGameState(GameStates.GameOver);
                 }
                 break;
-            case GameStates.Crier:
+            case GameStates.TownCrier:
                 // TODO perform crier action
                 break;
             case GameStates.Pause:
