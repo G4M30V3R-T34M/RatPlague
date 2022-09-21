@@ -12,6 +12,9 @@ public class GameManager : Singleton<GameManager>
     private int iterations;
     GameStates state;
 
+    public delegate void DayAction();
+    public event DayAction day;
+
     private void Start() {
         iterations = 0;
         UpdateGameState(GameStates.Play);
@@ -21,11 +24,7 @@ public class GameManager : Singleton<GameManager>
         state = newState;
         switch (state) {
             case GameStates.Play:
-                if(iterations < _settings.totalIterations) {
-                    StartCoroutine(Playing());
-                } else {
-                    UpdateGameState(GameStates.GameOver);
-                }
+                StartCoroutine(Playing());
                 break;
             case GameStates.TownCrier:
                 // TODO perform crier action
@@ -43,9 +42,9 @@ public class GameManager : Singleton<GameManager>
         int iterationDay = 0;
         while(iterationDay < _settings.daysPerIteration) {
             yield return new WaitForSeconds(_settings.secondsPerDay);
-            // TODO perform day action
+            day.Invoke();
             iterationDay += 1;
         }
-        UpdateGameState(GameStates.Crier);
+        UpdateGameState(GameStates.TownCrier);
     }
 }
