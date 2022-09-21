@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.neengash.unityfeto": "https://github.com/Neengash/UnityFeTo.git?path=/Assets/FeTo",
+    "com.neengash.unityfeto": "https://github.com/Neengash/UnityFeTo.git#FeTo",
     "com.unity.2d.animation": "7.0.6",
     "com.unity.2d.pixel-perfect": "5.0.1",
     "com.unity.2d.psdimporter": "6.0.4",
