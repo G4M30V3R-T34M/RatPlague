@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public abstract class BaseTile : MonoBehaviour
+public abstract class BaseBuilding : MonoBehaviour
 {
     [SerializeField] protected BaseBuildingScriptable _settings;
     

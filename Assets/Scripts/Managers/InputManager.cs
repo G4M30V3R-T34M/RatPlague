@@ -38,11 +38,11 @@ public class InputManager : MonoBehaviour
     private void PerformClick(bool isLeft, int iteration) {
         RaycastHit2D hit = Physics2D.Raycast(mainCamera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (hit) {
-            BaseTile tile = hit.collider.gameObject.GetComponent<BaseTile>();
-            if (tile != null && isLeft) {
-                tile.MouseLeftClick(iteration);
-            } else if (tile != null) {
-                tile.MouseRightClick(iteration);
+            BaseBuilding building = hit.collider.gameObject.GetComponent<BaseBuilding>();
+            if (building != null && isLeft) {
+                building.MouseLeftClick(iteration);
+            } else if (building != null) {
+                building.MouseRightClick(iteration);
             }
         }
     }

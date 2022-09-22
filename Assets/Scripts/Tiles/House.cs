@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class House : BaseTile
+public class House : BaseBuilding
 {
     protected override void DayAction() {
         GenerateFood();
