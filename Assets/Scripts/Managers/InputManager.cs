@@ -4,17 +4,32 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    [SerializeField] InputManagerScriptable _settings;
     [SerializeField] Camera mainCamera;
+
+    Coroutine assignCoroutineReference;
 
     void Update()
     {
-        if (Input.GetButtonDown("LeftClick")) {
-            bool isLeft = true;
+        if (Input.GetButtonDown("LeftClick") || Input.GetButtonDown("RightClick")) {
+            bool isLeft = Input.GetButtonDown("LeftClick") ? true : false;
+            if (assignCoroutineReference != null) {
+                StopCoroutine(assignCoroutineReference);
+            }
+            assignCoroutineReference = StartCoroutine(AssignCoroutine(isLeft));
+
+        }
+    }
+
+    private IEnumerator AssignCoroutine(bool isLeft) {
+        string inputButton = isLeft ? "LeftClick" : "RightClick";
+        float timeToNextAssign = _settings.startAssignTime;
+        while (Input.GetButton(inputButton)) {
             PerformClick(isLeft);
-            
-        } else if(Input.GetButtonDown("RightClick")) {
-            bool isLeft = false;
-            PerformClick(isLeft);
+            yield return new WaitForSeconds(timeToNextAssign);
+            if (timeToNextAssign > _settings.minTimeAssign) {
+                timeToNextAssign -= _settings.decrementTimeAssign;
+            }
         }
     }
 
