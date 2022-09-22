@@ -10,7 +10,7 @@ public class PauseManager : MonoBehaviour
         if (Input.GetButtonDown("Pause")) {
             Time.timeScale = Time.timeScale == 1 ? 0 : 1;
             pauseCanvas.gameObject.SetActive(
-                !pauseCanvas.gameObject.active);
+                !pauseCanvas.gameObject.activeInHierarchy);
         }
         
     }
