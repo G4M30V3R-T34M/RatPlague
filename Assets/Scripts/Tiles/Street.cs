@@ -11,15 +11,15 @@ public class Street : Singleton<Street>
         rats = 1;
     }
 
-    public bool HasAvaibleRats() {
-        return rats > 0;
+    public bool HasAvaibleRats(int desiredRats) {
+        return rats >= desiredRats;
     }
 
-    public void Assign() {
-        rats += 1;
+    public void Assign(int ratsToAssign) {
+        rats += ratsToAssign;
     }
 
-    public void Unassign() {
+    public void Unassign(int ratsToUnassign) {
         rats -= 1;
     }
 

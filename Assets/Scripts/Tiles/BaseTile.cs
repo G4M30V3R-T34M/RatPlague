@@ -33,7 +33,7 @@ public abstract class BaseTile : MonoBehaviour
     }
 
     public void MouseLeftClick(int iteration) {
-        int ratsToAssign = 1 // TODO change this to use with iterations
+        int ratsToAssign = 1; // TODO change this to use with iterations
         if (Street.Instance.HasAvaibleRats(ratsToAssign)) {
             assignedRats += ratsToAssign;
             Street.Instance.Unassign(ratsToAssign);
