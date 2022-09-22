@@ -10,11 +10,11 @@ public abstract class BaseTile : MonoBehaviour
     SpriteRenderer tileIcon;
 
     Color defaultColor;
-    int assignedRats;
+    protected int assignedRats;
+    protected int currentFood;
 
     protected void Awake() {
         tileIcon = GetComponent<SpriteRenderer>();
-        GameManager.Instance.day += TileAction;
     }
 
     protected void Start() {
@@ -22,12 +22,24 @@ public abstract class BaseTile : MonoBehaviour
         assignedRats = 0;
     }
 
-    protected virtual void TileAction() {}
+    private void OnEnable() {
+        GameManager.Instance.day += DayAction;
+        GameManager.Instance.townCriwer += TownCrierAction;
+    }
+
+    private void OnDisable() {
+        GameManager.Instance.day -= DayAction;
+        GameManager.Instance.townCriwer -= TownCrierAction;
+    }
+
+    protected abstract void DayAction();
+    protected abstract void TownCrierAction();
 
     private void OnMouseEnter() {
         tileIcon.color = _settings.ColorOnMouseEnter;
         // TODO Get tile info to display
     }
+
     private void OnMouseExit() {
         tileIcon.color = defaultColor;
     }
@@ -47,4 +59,9 @@ public abstract class BaseTile : MonoBehaviour
             Street.Instance.Assign(ratsToUnassign);
         }
     }
+
+    public float GetRatOccupationRatio() {
+        return assignedRats / _settings.maxRats;
+    }
+
 }

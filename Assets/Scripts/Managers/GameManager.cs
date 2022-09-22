@@ -13,7 +13,7 @@ public class GameManager : Singleton<GameManager>
     GameStates state;
 
     public delegate void DayAction();
-    public event DayAction day;
+    public event DayAction day, townCriwer;
 
     private void Start() {
         iterations = 0;
@@ -27,6 +27,7 @@ public class GameManager : Singleton<GameManager>
                 StartCoroutine(Playing());
                 break;
             case GameStates.TownCrier:
+                townCriwer.Invoke();
                 // TODO perform crier action
                 break;
             case GameStates.Pause:
