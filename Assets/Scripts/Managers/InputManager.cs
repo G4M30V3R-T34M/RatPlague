@@ -24,8 +24,9 @@ public class InputManager : MonoBehaviour
     private IEnumerator AssignCoroutine(bool isLeft) {
         string inputButton = isLeft ? "LeftClick" : "RightClick";
         float timeToNextAssign = _settings.startAssignTime;
+        int iteration = 0;
         while (Input.GetButton(inputButton)) {
-            PerformClick(isLeft);
+            PerformClick(isLeft, iteration);
             yield return new WaitForSeconds(timeToNextAssign);
             if (timeToNextAssign > _settings.minTimeAssign) {
                 timeToNextAssign -= _settings.decrementTimeAssign;
@@ -33,14 +34,14 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    private void PerformClick(bool isLeft) {
+    private void PerformClick(bool isLeft, int iteration) {
         RaycastHit2D hit = Physics2D.Raycast(mainCamera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (hit) {
             BaseTile tile = hit.collider.gameObject.GetComponent<BaseTile>();
             if (tile != null && isLeft) {
-                tile.MouseLeftClick();
+                tile.MouseLeftClick(iteration);
             } else if (tile != null) {
-                tile.MouseRightClick();
+                tile.MouseRightClick(iteration);
             }
         }
     }
