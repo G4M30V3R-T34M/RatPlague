@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BaseIconScriptable", menuName = "Scriptables/BaseIconScriptable", order = 2)]
+[CreateAssetMenu(fileName = "BaseBuildingScriptable", menuName = "Scriptables/BaseBuildingScriptable", order = 2)]
 public class BaseBuildingScriptable : ScriptableObject
 {
     public Color ColorOnMouseEnter;
