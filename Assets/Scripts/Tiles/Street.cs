@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Street : Singleton<Street>
 {
+    public int food { get; set; }
     int rats;
 
     private void Start() {
