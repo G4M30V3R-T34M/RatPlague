@@ -59,9 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Cardinal-Alternate SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 1543517010
   material: {fileID: 7741841924296360699}
-  materialHashCode: 0
+  materialHashCode: -1100388558
   m_Version: 1.1.0
   m_SourceFontFileGUID: 78252b6e3a6b37749b30fb86b050aa2b
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 78252b6e3a6b37749b30fb86b050aa2b, type: 3}
@@ -2694,9 +2694,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.90909094
+    - _ScaleRatioB: 0.7386364
+    - _ScaleRatioC: 0.7386364
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
