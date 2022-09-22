@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class BaseTile : MonoBehaviour
 {
-    [SerializeField] protected BaseIconScriptable _settings;
+    [SerializeField] protected BaseBuildingScriptable _settings;
     
     SpriteRenderer tileIcon;
 

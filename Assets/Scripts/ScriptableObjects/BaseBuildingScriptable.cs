@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "BaseIconScriptable", menuName = "Scriptables/BaseIconScriptable", order = 2)]
-public class BaseIconScriptable : ScriptableObject
+public class BaseBuildingScriptable : ScriptableObject
 {
     public Color ColorOnMouseEnter;
 
@@ -23,4 +23,4 @@ public class BaseIconScriptable : ScriptableObject
     [Header("Structure Info")]
     [Range(0.0f, 1.0f)] public float destructionChance;
     [Range(0.0f, 1.0f)] public float ratsKilledOnDestructionChance;
-}
+} 
