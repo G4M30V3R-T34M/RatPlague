@@ -10,6 +10,7 @@ public abstract class BaseTile : MonoBehaviour
     SpriteRenderer tileIcon;
 
     Color defaultColor;
+    int assignedRats;
 
     protected void Awake() {
         tileIcon = GetComponent<SpriteRenderer>();
@@ -18,6 +19,7 @@ public abstract class BaseTile : MonoBehaviour
 
     protected void Start() {
         defaultColor = tileIcon.color;
+        assignedRats = 0;
     }
 
     protected virtual void TileAction() {}
@@ -30,11 +32,19 @@ public abstract class BaseTile : MonoBehaviour
         tileIcon.color = defaultColor;
     }
 
-    public void MouseLeftClick() {
-        // TODO assign mouse
+    public void MouseLeftClick(int iteration) {
+        int ratsToAssign = 1; // TODO change this to use with iterations
+        if (Street.Instance.HasAvaibleRats(ratsToAssign)) {
+            assignedRats += ratsToAssign;
+            Street.Instance.Unassign(ratsToAssign);
+        }
     }
 
-    public void MouseRightClick() {
-        //TODO implement
+    public void MouseRightClick(int iteration) {
+        int ratsToUnassign = 1; // TODO change this to use with ireations
+        if (assignedRats >= ratsToUnassign) {
+            assignedRats -= ratsToUnassign;
+            Street.Instance.Assign(ratsToUnassign);
+        }
     }
 }
