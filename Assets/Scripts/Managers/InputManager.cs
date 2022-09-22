@@ -28,6 +28,7 @@ public class InputManager : MonoBehaviour
         while (Input.GetButton(inputButton)) {
             PerformClick(isLeft, iteration);
             yield return new WaitForSeconds(timeToNextAssign);
+            iteration++;
             if (timeToNextAssign > _settings.minTimeAssign) {
                 timeToNextAssign -= _settings.decrementTimeAssign;
             }
