@@ -24,12 +24,12 @@ public abstract class BaseTile : MonoBehaviour
 
     private void OnEnable() {
         GameManager.Instance.day += DayAction;
-        GameManager.Instance.townCriwer += TownCrierAction;
+        GameManager.Instance.townCrier += TownCrierAction;
     }
 
     private void OnDisable() {
         GameManager.Instance.day -= DayAction;
-        GameManager.Instance.townCriwer -= TownCrierAction;
+        GameManager.Instance.townCrier -= TownCrierAction;
     }
 
     protected abstract void DayAction();
