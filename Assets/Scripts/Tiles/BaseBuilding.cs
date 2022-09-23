@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 public abstract class BaseBuilding : MonoBehaviour
 {
     [SerializeField] protected BaseBuildingScriptable _settings;
     
     SpriteRenderer tileIcon;
+    protected new Collider2D collider;
 
     Color defaultColor;
     protected int assignedRats;
     protected int currentFood;
 
-    protected void Awake() {
+    protected virtual void Awake() {
         tileIcon = GetComponent<SpriteRenderer>();
+        collider = GetComponent<Collider2D>();
     }
 
-    protected void Start() {
+    protected virtual void Start() {
         defaultColor = tileIcon.color;
         assignedRats = 0;
     }
