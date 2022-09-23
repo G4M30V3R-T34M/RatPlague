@@ -152,10 +152,10 @@ TextureImporter:
       name: Ground
       rect:
         serializedVersion: 2
-        x: 642
-        y: 1640
-        width: 317
-        height: 320
+        x: 643
+        y: 1642
+        width: 314
+        height: 315
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,9 +174,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 997
-        y: 1641
+        y: 1642
         width: 326
-        height: 319
+        height: 316
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: Grass
       rect:
         serializedVersion: 2
-        x: 641
-        y: 1280
-        width: 318
-        height: 318
+        x: 643
+        y: 1282
+        width: 314
+        height: 313
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: Water
       rect:
         serializedVersion: 2
-        x: 1361
-        y: 1279
-        width: 320
-        height: 319
+        x: 1363
+        y: 1282
+        width: 316
+        height: 315
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
