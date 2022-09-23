@@ -31,8 +31,10 @@ public abstract class BaseBuilding : MonoBehaviour
     }
 
     private void OnDisable() {
-        GameManager.Instance.day -= DayAction;
-        GameManager.Instance.townCrier -= TownCrierAction;
+        if (GameManager.Instance != null) {
+            GameManager.Instance.day -= DayAction;
+            GameManager.Instance.townCrier -= TownCrierAction;
+        }
     }
 
     protected abstract void DayAction();

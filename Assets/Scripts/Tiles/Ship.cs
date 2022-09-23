@@ -6,13 +6,23 @@ public class Ship : BaseBuilding
 {
     protected enum ShipState { AtPort, Transition, Navigating }
     protected ShipState state = ShipState.Navigating;
-    protected new ShipScriptable _settings;
+    protected ShipScriptable _shipSettings;
     protected int daysInSameState = 0;
     protected int humansOnBoard;
+    protected Animator animator;
+    const string LEAVE_PORT = "Leave", ARRIVE_PORT = "Arrive";
 
     protected override void Awake() {
         base.Awake();
+        animator = GetComponent<Animator>();
+
         collider.enabled = false;
+
+        if (_settings is ShipScriptable shipSettings) {
+            _shipSettings = shipSettings;
+        } else {
+            throw new System.Exception($"ShipSettings recieved {_settings.GetType()} instead of ShipSettingsScriptable");
+        }
     }
 
     protected override void DayAction() {
@@ -40,21 +50,20 @@ public class Ship : BaseBuilding
     }
 
     protected void NavigatingDayAction() {
-        if (CheckShipChangeState(_settings.backToPortChancePerDay)) {
+        if (CheckShipChangeState(_shipSettings.backToPortChancePerDay)) {
             state = ShipState.Transition;
-            // TODO: Start BackToPortAnimation
+            animator.SetTrigger(ARRIVE_PORT);
             daysInSameState = 0;
-
         } else {
             daysInSameState++;
         }
     }
 
     protected void AtPortDayAction() {
-        if (CheckShipChangeState(_settings.leavePortChancePerDay)) {
+        if (CheckShipChangeState(_shipSettings.leavePortChancePerDay)) {
             state = ShipState.Transition;
             collider.enabled = false;
-            // TODO: Start LeavePortAnimation
+            animator.SetTrigger(LEAVE_PORT);
         } else {
             daysInSameState++;
         }
@@ -63,7 +72,7 @@ public class Ship : BaseBuilding
     protected void CheckHumansInfected() {
         int humansKilled = 0;
         for (int i = 0; i < assignedRats; i++) {
-            if (Random.Range(0.0f, 1.0f) < _settings.humansKilledChance) {
+            if (Random.Range(0.0f, 1.0f) < _shipSettings.humansKilledChance) {
                 humansKilled++;
             }
         }
@@ -82,7 +91,7 @@ public class Ship : BaseBuilding
     }
 
     protected void GenerateHumansOnBoard() {
-        humansOnBoard = Random.Range(_settings.minHumansOnBoard, _settings.maxHumansOnBoard);
+        humansOnBoard = Random.Range(_shipSettings.minHumansOnBoard, _shipSettings.maxHumansOnBoard);
     }
 
 }
