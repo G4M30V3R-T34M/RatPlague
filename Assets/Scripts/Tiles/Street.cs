@@ -21,7 +21,7 @@ public class Street : Singleton<Street>
     }
 
     public void Unassign(int ratsToUnassign) {
-        rats -= 1;
+        rats -= ratsToUnassign;
     }
 
 }
