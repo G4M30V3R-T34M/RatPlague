@@ -32,6 +32,7 @@ public class House : BaseBuilding
 
     protected void InfectHumans() {
         // TODO: MISSING SCORE MANAGER
+        // TODO: ADD SCORE TO CRIER MANAGER
     }
 
     protected void GenerateStreetFood() {
