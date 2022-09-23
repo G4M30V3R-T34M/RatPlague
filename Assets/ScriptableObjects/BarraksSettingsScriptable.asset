@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4868f9c3c275502428795c6ddd8192d2, type: 3}
+  m_Name: BarraksSettingsScriptable
+  m_EditorClassIdentifier: 
+  ColorOnMouseEnter: {r: 0, g: 0, b: 0, a: 0}
+  maxRats: 0
+  ratsKilledChance: 0
+  maxFood: 0
+  minFoodGenerated: 0
+  maxFoodGenerated: 0
+  streetFoodGenerationChance: 0
+  humansKilledChance: 0
+  destructionChance: 0
+  ratsKilledOnDestructionChance: 0
+  ratsNeededForDistraction: 0

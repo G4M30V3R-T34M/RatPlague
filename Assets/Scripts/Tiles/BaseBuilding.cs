@@ -15,6 +15,8 @@ public abstract class BaseBuilding : MonoBehaviour
     protected int assignedRats;
     protected int currentFood;
 
+    private bool executedStart = false;
+
     protected virtual void Awake() {
         tileIcon = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
@@ -23,11 +25,15 @@ public abstract class BaseBuilding : MonoBehaviour
     protected virtual void Start() {
         defaultColor = tileIcon.color;
         assignedRats = 0;
+        executedStart = true;
+        OnEnable();
     }
 
     private void OnEnable() {
-        GameManager.Instance.day += DayAction;
-        GameManager.Instance.townCrier += TownCrierAction;
+        if (executedStart) {
+            GameManager.Instance.day += DayAction;
+            GameManager.Instance.townCrier += TownCrierAction;
+        }
     }
 
     private void OnDisable() {
