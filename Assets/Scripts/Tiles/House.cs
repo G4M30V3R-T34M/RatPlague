@@ -5,11 +5,11 @@ using UnityEngine;
 public class House : BaseBuilding
 {
     protected override void DayAction() {
-        GenerateFood();
-        FeedRats();
         InfectHumans();
         GenerateStreetFood();
+        GenerateFood();
         KillRats(_settings.ratsKilledChance);
+        FeedRats();
     }
 
     protected override void TownCrierAction() {
