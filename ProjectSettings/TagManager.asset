@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1435884495
+    locked: 0
   - name: MousePointer
     uniqueID: 1673683287
     locked: 0
