@@ -32,14 +32,14 @@ public abstract class BaseBuilding : MonoBehaviour
     private void OnEnable() {
         if (executedStart) {
             GameManager.Instance.day += DayAction;
-            GameManager.Instance.townCrier += TownCrierAction;
+            GameManager.Instance.townCrierDelegate += TownCrierAction;
         }
     }
 
     private void OnDisable() {
         if (GameManager.Instance != null) {
             GameManager.Instance.day -= DayAction;
-            GameManager.Instance.townCrier -= TownCrierAction;
+            GameManager.Instance.townCrierDelegate -= TownCrierAction;
         }
     }
 
