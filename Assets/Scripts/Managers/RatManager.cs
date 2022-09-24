@@ -5,13 +5,8 @@ using Feto;
 
 public class RatManager : Singleton<RatManager>
 {
-    Street street;
     List<BaseBuilding> buildings;
-
-    protected override void Awake() {
-        base.Awake();
-        street = FindObjectOfType<Street>();
-    }
+    Coroutine ratCheckCoroutine;
 
     protected void Start() {
         buildings = new List<BaseBuilding>();
@@ -20,6 +15,7 @@ public class RatManager : Singleton<RatManager>
 
     protected override void OnDestroy() {
         base.OnDestroy();
+        StopCoroutine(ratCheckCoroutine);
         if (GameManager.Instance != null) {
             GameManager.Instance.day -= RatCheck;
         }
@@ -36,14 +32,16 @@ public class RatManager : Singleton<RatManager>
     }
 
     protected void RatCheck() {
-        StartCoroutine(RatCheckCoroutine());
+        ratCheckCoroutine = StartCoroutine(RatCheckCoroutine());
     }
 
     IEnumerator RatCheckCoroutine() {
         yield return null; // Be sure all day actions have happened
         int rats = 0;
 
-        rats += street.rats;
+        if (Street.Instance != null) {
+            rats += Street.Instance.rats;
+        }
 
         for (int i = 0; i < buildings.Count; i++) {
             rats += buildings[i].assignedRats;

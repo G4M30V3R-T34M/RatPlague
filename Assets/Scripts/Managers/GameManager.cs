@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Feto;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using TMPro;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -51,6 +48,7 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForSeconds(_settings.secondsPerDay);
             day.Invoke();
             iterationDay += 1;
+            Debug.Log("Day");
         }
         UpdateGameState(GameStates.TownCrier);
     }
