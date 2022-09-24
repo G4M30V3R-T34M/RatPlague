@@ -12,7 +12,6 @@ public class GameOverManager : SingletonPersistent<GameOverManager>
     GameOverCondition endGameCause;
 
     public void EndGame(GameOverCondition cause) {
-        Debug.Log(cause.ToString());
         endGameCause = cause;
         SceneManager.ChangeScene(Scenes.GameOver);
     }

@@ -48,7 +48,6 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForSeconds(_settings.secondsPerDay);
             day.Invoke();
             iterationDay += 1;
-            Debug.Log("Day");
         }
         UpdateGameState(GameStates.TownCrier);
     }
