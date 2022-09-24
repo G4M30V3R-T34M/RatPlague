@@ -63,6 +63,7 @@ public class Street : Singleton<Street>
                 newRats++;
             }
         }
+        CrierManager.Instance.bornRats += newRats;
         rats += newRats;
     }
 
