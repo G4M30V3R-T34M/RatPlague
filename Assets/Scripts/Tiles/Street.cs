@@ -6,7 +6,7 @@ using UnityEngine;
 public class Street : Singleton<Street>
 {
     public int food { get; set; }
-    int rats;
+    public int rats { get; set; }
 
     private void Start() {
         rats = 1;
