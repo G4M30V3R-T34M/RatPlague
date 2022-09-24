@@ -20,6 +20,7 @@ public class House : BaseBuilding
         currentFood -= assignedRats;
         if (currentFood < 0) {
             assignedRats += currentFood; // Kill rats that couldn't eat
+            CrierManager.Instance.deathRats += -currentFood; // Count death rats
             currentFood = 0;
         }
     }
@@ -52,6 +53,7 @@ public class House : BaseBuilding
                 killedRats++;
             }
         }
+        CrierManager.Instance.deathRats += killedRats;
         assignedRats -= killedRats;
     }
 
