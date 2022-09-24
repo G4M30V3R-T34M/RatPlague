@@ -29,8 +29,11 @@ public class GameManager : Singleton<GameManager>
                 break;
             case GameStates.TownCrier:
                 if (townCrierDelegate != null) { townCrierDelegate(); };
-                CrierManager.Instance.DisplayInfo();
-                // TODO perform crier action
+                iterations++;
+                if (iterations < _settings.totalIterations) {
+                    CrierManager.Instance.DisplayInfo();
+                }
+                GameOverManager.Instance.EndGame(GameOverCondition.Quarantine);
                 break;
             case GameStates.Pause:
                 // TODO perform pause action
