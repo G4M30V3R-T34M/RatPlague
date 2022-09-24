@@ -19,8 +19,10 @@ public class RatManager : Singleton<RatManager>
     }
 
     protected override void OnDestroy() {
-        GameManager.Instance.day -= RatCheck;
         base.OnDestroy();
+        if (GameManager.Instance != null) {
+            GameManager.Instance.day -= RatCheck;
+        }
     }
 
     public void AddBuilding(BaseBuilding building) {
@@ -28,7 +30,9 @@ public class RatManager : Singleton<RatManager>
     }
     
     public void RemoveBuilding(BaseBuilding building) {
-        buildings.Remove(building);
+        if (buildings != null) {
+            buildings.Remove(building);
+        }
     }
 
     protected void RatCheck() {

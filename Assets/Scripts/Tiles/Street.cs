@@ -14,14 +14,20 @@ public class Street : Singleton<Street>
     protected int generatedFood;
     public int rats { get; private set; }
 
+    private bool executedStart = false;
+
     private void Start() {
         rats = _settings.startingRats;
         food = _settings.startingFood;
         availableFood = food;
+        executedStart = true;
+        OnEnable();
     }
 
     protected void OnEnable() {
-        GameManager.Instance.day += DayAction;
+        if (executedStart) {
+            GameManager.Instance.day += DayAction;
+        }
     }
 
     protected void OnDisable() {
