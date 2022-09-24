@@ -5,11 +5,59 @@ using UnityEngine;
 
 public class Street : Singleton<Street>
 {
-    public int food { get; set; }
-    public int rats { get; set; }
+    [SerializeField] StreetScriptable _settings;
+    public int food {
+        get { return availableFood + generatedFood; }
+        set { generatedFood = value; }
+    }
+    protected int availableFood;
+    protected int generatedFood;
+    public int rats { get; private set; }
 
     private void Start() {
-        rats = 1;
+        rats = _settings.startingRats;
+        food = _settings.startingFood;
+        availableFood = food;
+    }
+
+    protected void OnEnable() {
+        GameManager.Instance.day += DayAction;
+    }
+
+    protected void OnDisable() {
+        if (GameManager.Instance != null) {
+            GameManager.Instance.day -= DayAction;
+        }
+    }
+
+    protected void DayAction() {
+        FeedRats();
+        ReproduceRats();
+        StartCoroutine(UpdateAvailableFood());
+    }
+
+    protected void FeedRats() {
+        availableFood -= rats;
+        if (availableFood < 0) {
+            rats += availableFood; // Kill rats that couldn't eat
+            availableFood = 0;
+        }
+    }
+
+    protected void ReproduceRats() {
+        int newRats = 0;
+        for (int i = 0; i < rats; i++) {
+            if (Random.Range(0.0f, 1.0f) < _settings.ratReproductionRate) {
+                newRats++;
+            }
+        }
+        rats += newRats;
+    }
+
+    IEnumerator UpdateAvailableFood() {
+        yield return null;
+        availableFood += generatedFood;
+        generatedFood = 0;
     }
 
     public bool HasAvaibleRats(int desiredRats) {
