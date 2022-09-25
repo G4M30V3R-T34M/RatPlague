@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingRats: 5
   startingFood: 10
-  ratReproductionRate: 0
+  ratReproductionRate: 0.5

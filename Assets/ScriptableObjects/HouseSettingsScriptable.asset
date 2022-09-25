@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1f049ba15c3144aa60502fb87f4c78, type: 3}
   m_Name: HouseSettingsScriptable
   m_EditorClassIdentifier: 
+  buildingName: House
+  buildingDescription: TODO improve house
+  maxRats: 20
+  ratsKilledChance: 0.2
+  maxFood: 500
+  minFoodGenerated: 15
+  maxFoodGenerated: 50
+  streetFoodGenerationChance: 0.3
+  humansKilledChance: 0.05
+  destructionChance: 0.05
+  ratsKilledOnDestructionChance: 0.5
   ColorOnMouseEnter: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}
-  maxRats: 0
-  ratsKilledChance: 0
-  maxFood: 0
-  minFoodGenerated: 0
-  maxFoodGenerated: 0
-  streetFoodGenerationChance: 0
-  humansKilledChance: 0
-  destructionChance: 0
-  ratsKilledOnDestructionChance: 0
