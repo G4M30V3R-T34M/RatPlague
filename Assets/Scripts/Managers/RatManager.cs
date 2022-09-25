@@ -50,9 +50,9 @@ public class RatManager : Singleton<RatManager>
         CrierManager.Instance.currentRats = rats;
 
         if (rats <= 0) {
-            GameOverManager.Instance.EndGame(GameOverCondition.NoRats);
+            EndGameManager.Instance.EndGame(GameOverCondition.NoRats);
         } else if (rats >= 100) {
-            GameOverManager.Instance.EndGame(GameOverCondition.TooManyRats);
+            EndGameManager.Instance.EndGame(GameOverCondition.TooManyRats);
         }
     }
 }

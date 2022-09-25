@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Feto;
 
-public class GameOverManager : SingletonPersistent<GameOverManager>
+public class EndGameManager : SingletonPersistent<EndGameManager>
 {
-    [SerializeField] string noRatsEnd;
-    [SerializeField] string tooManyRatsEnd;
-    [SerializeField] string quarantineEnd;
-
     GameOverCondition endGameCause;
     public int score { get; set; }
 

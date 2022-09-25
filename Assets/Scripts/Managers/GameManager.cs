@@ -30,7 +30,7 @@ public class GameManager : Singleton<GameManager>
                 if (iterations < _settings.totalIterations) {
                     CrierManager.Instance.DisplayInfo();
                 } else {
-                    GameOverManager.Instance.EndGame(GameOverCondition.Quarantine);
+                    EndGameManager.Instance.EndGame(GameOverCondition.Quarantine);
                 }
                 break;
             case GameStates.Pause:

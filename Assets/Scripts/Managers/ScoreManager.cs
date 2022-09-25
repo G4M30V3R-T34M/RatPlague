@@ -13,6 +13,6 @@ public class ScoreManager : Singleton<ScoreManager>
 
     protected override void OnDestroy() {
         base.OnDestroy();
-        GameOverManager.Instance.score = score;
+        EndGameManager.Instance.score = score;
     }
 }
