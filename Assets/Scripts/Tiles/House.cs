@@ -66,10 +66,11 @@ public class House : BaseBuilding
         float maxRatio = _settings.destructionChance * GetRatOccupationRatio();
         if (Random.Range(0.0f, 1.0f) < maxRatio) {
             // TODO: How do we destroy Building
-
+            CrierManager.Instance.destroyedBuildings[_settings.buildingName] += 1;
             KillRats(_settings.ratsKilledOnDestructionChance);
             Street.Instance.Assign(assignedRats);
             assignedRats = 0;
+            gameObject.SetActive(false);
         }
     }
 }
