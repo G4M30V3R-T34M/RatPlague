@@ -36,8 +36,8 @@ public class CrierManager : Singleton<CrierManager>
     public int bornRats { get; set; }
 
     // This two dicts should be dicts
-    public List<string> destroyedBuildings { get; set; }
-    public List<string> newBuildings { get; set; }
+    public Dictionary<Buildings, int> destroyedBuildings { get; set; }
+    public Dictionary<Buildings, int> newBuildings { get; set; }
 
     void Start()
     {
@@ -53,9 +53,18 @@ public class CrierManager : Singleton<CrierManager>
         previousFood = currentFood;
         deathRats = 0;
         bornRats = 0;
-        // TODO change this to dict
-        //destroyedBuildings.Clear();
-        //newBuildings.Clear();
+        // Create new dictionaries
+        destroyedBuildings = new Dictionary<Buildings, int>() {
+            {Buildings.House, 0},
+            {Buildings.Warehouse, 0},
+            {Buildings.Military, 0}
+        };
+        newBuildings = new Dictionary<Buildings, int>() {
+            {Buildings.House, 0},
+            {Buildings.Warehouse, 0},
+            {Buildings.Military, 0}
+        };
+
     }
 
     public void DisplayInfo() {
@@ -91,7 +100,28 @@ public class CrierManager : Singleton<CrierManager>
     }
 
     private void FillBuildings() {
-        //TODO
+        // Destroyed Buildings
+        destroyedHouseText.SetText(
+            destroyedBuildings[Buildings.House].ToString()
+        );
+        destroyedWareHouseText.SetText(
+            destroyedBuildings[Buildings.Warehouse].ToString()
+        );
+        destroyedBarracsText.SetText(
+            destroyedBuildings[Buildings.Military].ToString()
+        );
+        // New buildings
+        createdHouseText.SetText(
+            newBuildings[Buildings.House].ToString()
+        );
+        createdWareHouseText.SetText(
+            newBuildings[Buildings.Warehouse].ToString()
+        );
+        createdBarracsText.SetText(
+            newBuildings[Buildings.Military].ToString()
+        );
+        
+
     }
 
     private Color GetColorText(int prevValue, int currValue) {
