@@ -10,6 +10,7 @@ public class GameOverManager : SingletonPersistent<GameOverManager>
     [SerializeField] string quarantineEnd;
 
     GameOverCondition endGameCause;
+    public int score { get; set; }
 
     public void EndGame(GameOverCondition cause) {
         endGameCause = cause;

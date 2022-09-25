@@ -71,13 +71,13 @@ public class Ship : BaseBuilding
     }
 
     protected void CheckHumansInfected() {
-        int humansKilled = 0;
+        int humansInfected = 0;
         for (int i = 0; i < assignedRats; i++) {
             if (Random.Range(0.0f, 1.0f) < _shipSettings.humansKilledChance) {
-                humansKilled++;
+                humansInfected++;
             }
         }
-        // TODO: ScoreManager
+        ScoreManager.Instance.score += humansInfected;
     }
 
     protected bool CheckShipChangeState(float chance) {
