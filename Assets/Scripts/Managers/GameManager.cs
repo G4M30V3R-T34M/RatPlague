@@ -35,6 +35,7 @@ public class GameManager : Singleton<GameManager>
                 break;
             case GameStates.Pause:
                 // TODO perform pause action
+                UpdateGameState(GameStates.Play);
                 break;
             case GameStates.GameOver:
                 // TODO perform gameOver action
@@ -47,6 +48,8 @@ public class GameManager : Singleton<GameManager>
         while(iterationDay < _settings.daysPerIteration) {
             yield return new WaitForSeconds(_settings.secondsPerDay);
             day.Invoke();
+            yield return null;
+            HUDManager.Instance.UpdateGeneralInfoHUD();
             iterationDay += 1;
         }
         UpdateGameState(GameStates.TownCrier);

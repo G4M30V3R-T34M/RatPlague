@@ -48,6 +48,7 @@ public class RatManager : Singleton<RatManager>
         }
 
         CrierManager.Instance.currentRats = rats;
+        HUDManager.Instance.totalRats = rats;
 
         if (rats <= 0) {
             GameOverManager.Instance.EndGame(GameOverCondition.NoRats);

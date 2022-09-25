@@ -40,6 +40,7 @@ public class Street : Singleton<Street>
         FeedRats();
         ReproduceRats();
         StartCoroutine(UpdateAvailableFood());
+        HUDManager.Instance.totalFood = food;
     }
 
     protected void FeedRats() {
