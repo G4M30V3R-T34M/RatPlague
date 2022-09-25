@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Feto;
 
 [RequireComponent(typeof(Collider2D))]
-public abstract class BaseBuilding : MonoBehaviour
+public abstract class BaseBuilding : PoolableObject
 {
     [SerializeField] protected BaseBuildingScriptable _settings;
     
@@ -39,7 +40,7 @@ public abstract class BaseBuilding : MonoBehaviour
         }
     }
 
-    private void OnDisable() {
+    protected override void OnDisable() {
         if (GameManager.Instance != null) {
             GameManager.Instance.dayDelegate -= DayAction;
             GameManager.Instance.townCrierDelegate -= TownCrierAction;
@@ -47,6 +48,8 @@ public abstract class BaseBuilding : MonoBehaviour
         if (RatManager.Instance != null) {
             RatManager.Instance.RemoveBuilding(this);
         }
+
+        base.OnDisable();
     }
 
     protected abstract void DayAction();
