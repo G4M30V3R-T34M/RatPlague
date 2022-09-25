@@ -26,7 +26,6 @@ public class ScrollManager : Singleton<ScrollManager>
     }
 
     public void NextUpdateScrollState() {
-        print(nextScrollState);
         DoUpdateScrollState(nextScrollState);
     }
     public void PrevUpdateScrollState() {
