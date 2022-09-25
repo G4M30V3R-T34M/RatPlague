@@ -17,6 +17,8 @@ public abstract class BaseBuilding : MonoBehaviour
 
     private bool executedStart = false;
 
+    private Coroutine UpdateBuildingHUBCoroutine;
+
     protected virtual void Awake() {
         tileIcon = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
@@ -54,6 +56,7 @@ public abstract class BaseBuilding : MonoBehaviour
         tileIcon.color = _settings.ColorOnMouseEnter;
         // Display info of the tile
         DisplayBuildingInfo();
+        GameManager.Instance.day += UpdateBuildingHUB;
     }
 
     private void DisplayBuildingInfo() {
@@ -68,6 +71,10 @@ public abstract class BaseBuilding : MonoBehaviour
     private void OnMouseExit() {
         tileIcon.color = defaultColor;
         HUDManager.Instance.UpdateStreetInfoHUD();
+        GameManager.Instance.day -= UpdateBuildingHUB;
+        if(UpdateBuildingHUBCoroutine != null) {
+            StopCoroutine(UpdateBuildingHUBCoroutine);
+        }
     }
 
     public void MouseLeftClick(int iteration) {
@@ -91,6 +98,18 @@ public abstract class BaseBuilding : MonoBehaviour
 
     public float GetRatOccupationRatio() {
         return assignedRats / _settings.maxRats;
+    }
+
+    protected void UpdateBuildingHUB() {
+        if (UpdateBuildingHUBCoroutine != null) {
+            StopCoroutine(UpdateBuildingHUBCoroutine);
+        }
+        UpdateBuildingHUBCoroutine = StartCoroutine(UpdateHUBCoroutine());
+    }
+
+    protected IEnumerator UpdateHUBCoroutine() {
+        yield return null;
+        DisplayBuildingInfo();
     }
 
 }

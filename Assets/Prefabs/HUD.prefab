@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6741089200911139040}
+  - component: {fileID: 1912049425963053532}
   m_Layer: 5
   m_Name: HUDManager
   m_TagString: Untagged
@@ -36,6 +37,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1912049425963053532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3441859292978781467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fca9c60c1101c49a2f0df34f661a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 5351008903006105362}
+  ratsText: {fileID: 5351008903557761128}
+  foodText: {fileID: 5351008904022468909}
+  buildingNameText: {fileID: 5351008904241390179}
+  buildingDescriptionText: {fileID: 5351008903269654925}
+  buildingRatsText: {fileID: 5351008904047036405}
+  buildingFoodText: {fileID: 5351008903263300828}
+  totalRats: 0
+  totalFood: 0
+  buildingName: 
+  buildingDescription: 
+  buildingCurrentRats: 0
+  buildingMaxRats: 0
+  buildingFood: 0
 --- !u!1 &5351008902744887462
 GameObject:
   m_ObjectHideFlags: 0
