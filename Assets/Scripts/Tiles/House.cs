@@ -32,8 +32,13 @@ public class House : BaseBuilding
     }
 
     protected void InfectHumans() {
-        // TODO: MISSING SCORE MANAGER
-        // TODO: ADD SCORE TO CRIER MANAGER
+        int infectedHumans = 0;
+        for (int i = 0; i < assignedRats; i++) {
+            if (Random.Range(0.0f, 1.0f) < _settings.humansKilledChance ) {
+                infectedHumans++;
+            }
+        }
+        ScoreManager.Instance.score += infectedHumans;
     }
 
     protected void GenerateStreetFood() {

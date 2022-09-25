@@ -10,4 +10,9 @@ public class ScoreManager : Singleton<ScoreManager>
     void Start() {
         score = 0;
     }
+
+    protected override void OnDestroy() {
+        base.OnDestroy();
+        EndGameManager.Instance.score = score;
+    }
 }

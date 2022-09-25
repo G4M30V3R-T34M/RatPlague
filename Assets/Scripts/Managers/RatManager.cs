@@ -51,9 +51,9 @@ public class RatManager : Singleton<RatManager>
         HUDManager.Instance.totalRats = rats;
 
         if (rats <= 0) {
-            GameOverManager.Instance.EndGame(GameOverCondition.NoRats);
+            EndGameManager.Instance.EndGame(GameOverCondition.NoRats);
         } else if (rats >= 100) {
-            GameOverManager.Instance.EndGame(GameOverCondition.TooManyRats);
+            EndGameManager.Instance.EndGame(GameOverCondition.TooManyRats);
         }
     }
 }
