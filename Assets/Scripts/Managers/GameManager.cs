@@ -35,6 +35,7 @@ public class GameManager : Singleton<GameManager>
                 break;
             case GameStates.CrierAssign:
                 // TODO perform pause action
+                // TMP bypass due crier assign not implemented yet
                 UpdateGameState(GameStates.Play);
                 break;
             case GameStates.GameOver:
@@ -47,7 +48,7 @@ public class GameManager : Singleton<GameManager>
         int iterationDay = 0;
         while(iterationDay < _settings.daysPerIteration) {
             yield return new WaitForSeconds(_settings.secondsPerDay);
-            dayDelegate.Invoke();
+            dayDelegate();
             yield return null;
             yield return null;
             HUDManager.Instance.UpdateGeneralInfoHUD();
