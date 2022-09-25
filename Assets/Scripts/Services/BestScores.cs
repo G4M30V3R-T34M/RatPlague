@@ -22,7 +22,7 @@ public static class BestScores
         while (!found && position <= 5) {
             if (
                 currentScore > GetScore(position) ||
-                GetScore(position, 0) == 0
+                (GetScore(position, 0) == 0 && GetName(position, "") == "")
             ) {
                 found = true;
             } else {
