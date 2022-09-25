@@ -15,7 +15,9 @@ public class RatManager : Singleton<RatManager>
 
     protected override void OnDestroy() {
         base.OnDestroy();
-        StopCoroutine(ratCheckCoroutine);
+        if (ratCheckCoroutine != null) {
+            StopCoroutine(ratCheckCoroutine);
+        }
         if (GameManager.Instance != null) {
             GameManager.Instance.dayDelegate -= RatCheck;
         }
