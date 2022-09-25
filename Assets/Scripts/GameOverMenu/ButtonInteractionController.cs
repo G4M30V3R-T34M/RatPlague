@@ -13,6 +13,7 @@ public class ButtonInteractionController : MonoBehaviour
 
     public void CheckButtonInteractable(string value) {
         nextButton.interactable = (value != "");
+        GameOverManager.Instance.playerName = value;
     }
 
 }

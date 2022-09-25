@@ -1,9 +1,12 @@
 using UnityEngine;
+using Feto;
 
-public class GameOverManager : MonoBehaviour
+public class GameOverManager : Singleton<GameOverManager>
 {
     [SerializeField] GameObject newRecordStep1, newRecordStep2, noNewRecord;
     [SerializeField] LoadBestScores bestScoresNewRecord, bestScoresNoNewRecord;
+
+    public string playerName;
 
     void Start() {
         if (BestScores.IsNewRecord(EndGameManager.Instance.score)) {
@@ -18,7 +21,7 @@ public class GameOverManager : MonoBehaviour
         }
     }
 
-    public void LoadNewRecordStep2(string playerName) {
+    public void LoadNewRecordStep2() {
         BestScores.SaveScore(playerName, EndGameManager.Instance.score);
         newRecordStep1.SetActive(false);
         newRecordStep2.SetActive(true);

@@ -1246,6 +1246,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayAgainButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1012831355}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GamePlay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
 --- !u!224 &467815800 stripped
@@ -1355,6 +1363,14 @@ PrefabInstance:
     - target: {fileID: 3770059576772039109, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
       propertyPath: m_Name
       value: MainMenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1012831355}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
@@ -2073,6 +2089,7 @@ GameObject:
   - component: {fileID: 1012831351}
   - component: {fileID: 1012831350}
   - component: {fileID: 1012831354}
+  - component: {fileID: 1012831355}
   m_Layer: 5
   m_Name: GameOverCanvas
   m_TagString: Untagged
@@ -2183,6 +2200,19 @@ MonoBehaviour:
   noNewRecord: {fileID: 1321040155}
   bestScoresNewRecord: {fileID: 214532526}
   bestScoresNoNewRecord: {fileID: 1150539494}
+  playerName: 
+--- !u!114 &1012831355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012831349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc81523926fa2d42acede0aa63ba732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1020462220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2937,6 +2967,14 @@ PrefabInstance:
     - target: {fileID: 3770059576772039109, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
       propertyPath: m_Name
       value: MainMenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1012831355}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
@@ -3916,6 +3954,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayAgainButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1012831355}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GamePlay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
 --- !u!224 &1765267092 stripped
@@ -4033,6 +4079,22 @@ PrefabInstance:
     - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
       propertyPath: m_Interactable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1012831354}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNewRecordStep2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770059576910090527, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOverManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
