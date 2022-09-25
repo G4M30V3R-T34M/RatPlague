@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1f049ba15c3144aa60502fb87f4c78, type: 3}
   m_Name: WarehouseSettingsScriptable
   m_EditorClassIdentifier: 
-  buildingName: Warehouse
+  buildingName: 1
   buildingDescription: TODO improve warehouse
   maxRats: 25
   ratsKilledChance: 0.3

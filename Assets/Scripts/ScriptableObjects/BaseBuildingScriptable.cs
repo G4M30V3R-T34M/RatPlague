@@ -6,7 +6,7 @@ using UnityEngine;
 public class BaseBuildingScriptable : ScriptableObject
 {
     [Header("General Info")]
-    public string buildingName;
+    public Buildings buildingName;
     public string buildingDescription;
 
     [Header("Rats Info")]
