@@ -17,7 +17,7 @@ public abstract class BaseBuilding : MonoBehaviour
 
     private bool executedStart = false;
 
-    private Coroutine UpdateBuildingHUBCoroutine;
+    private Coroutine UpdateBuildingHUDCoroutine;
 
     protected virtual void Awake() {
         tileIcon = GetComponent<SpriteRenderer>();
@@ -56,7 +56,7 @@ public abstract class BaseBuilding : MonoBehaviour
         tileIcon.color = _settings.ColorOnMouseEnter;
         // Display info of the tile
         DisplayBuildingInfo();
-        GameManager.Instance.dayDelegate += UpdateBuildingHUB;
+        GameManager.Instance.dayDelegate += UpdateBuildingHUD;
     }
 
     private void DisplayBuildingInfo() {
@@ -71,9 +71,9 @@ public abstract class BaseBuilding : MonoBehaviour
     private void OnMouseExit() {
         tileIcon.color = defaultColor;
         HUDManager.Instance.UpdateStreetInfoHUD();
-        GameManager.Instance.dayDelegate -= UpdateBuildingHUB;
-        if(UpdateBuildingHUBCoroutine != null) {
-            StopCoroutine(UpdateBuildingHUBCoroutine);
+        GameManager.Instance.dayDelegate -= UpdateBuildingHUD;
+        if(UpdateBuildingHUDCoroutine != null) {
+            StopCoroutine(UpdateBuildingHUDCoroutine);
         }
     }
 
@@ -100,14 +100,14 @@ public abstract class BaseBuilding : MonoBehaviour
         return assignedRats / _settings.maxRats;
     }
 
-    protected void UpdateBuildingHUB() {
-        if (UpdateBuildingHUBCoroutine != null) {
-            StopCoroutine(UpdateBuildingHUBCoroutine);
+    protected void UpdateBuildingHUD() {
+        if (UpdateBuildingHUDCoroutine != null) {
+            StopCoroutine(UpdateBuildingHUDCoroutine);
         }
-        UpdateBuildingHUBCoroutine = StartCoroutine(UpdateHUBCoroutine());
+        UpdateBuildingHUDCoroutine = StartCoroutine(UpdateHUDCoroutine());
     }
 
-    protected IEnumerator UpdateHUBCoroutine() {
+    protected IEnumerator UpdateHUDCoroutine() {
         yield return null;
         DisplayBuildingInfo();
     }
