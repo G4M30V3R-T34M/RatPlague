@@ -5,7 +5,7 @@ using Feto;
 
 public class EndGameManager : SingletonPersistent<EndGameManager>
 {
-    GameOverCondition endGameCause;
+    public GameOverCondition endGameCause;
     public int score { get; set; }
 
     public void EndGame(GameOverCondition cause) {
