@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4868f9c3c275502428795c6ddd8192d2, type: 3}
   m_Name: BarraksSettingsScriptable
   m_EditorClassIdentifier: 
-  buildingName: Barrak
+  buildingName: 2
   buildingDescription: TODO improve
   maxRats: 20
   ratsKilledChance: 0.01

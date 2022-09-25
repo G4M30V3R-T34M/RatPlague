@@ -60,7 +60,7 @@ public abstract class BaseBuilding : MonoBehaviour
     }
 
     private void DisplayBuildingInfo() {
-        HUDManager.Instance.buildingName = _settings.buildingName;
+        HUDManager.Instance.buildingName = _settings.buildingName.ToString();
         HUDManager.Instance.buildingDescription = _settings.buildingDescription;
         HUDManager.Instance.buildingCurrentRats = assignedRats;
         HUDManager.Instance.buildingMaxRats = _settings.maxRats;
