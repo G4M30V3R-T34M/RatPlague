@@ -5,7 +5,7 @@ using UnityEngine;
 using Feto;
 
 [RequireComponent(typeof(Collider2D))]
-public abstract class BaseBuilding : PoolableObject
+public abstract class BaseBuilding : MonoBehaviour
 {
     [SerializeField] protected BaseBuildingScriptable _settings;
     
@@ -20,9 +20,12 @@ public abstract class BaseBuilding : PoolableObject
 
     private Coroutine UpdateBuildingHUDCoroutine;
 
+    private PoolableBuilding poolableBuilding;
+
     protected virtual void Awake() {
         tileIcon = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
+        poolableBuilding = GetComponentInParent<PoolableBuilding>();
     }
 
     protected virtual void Start() {
@@ -39,8 +42,12 @@ public abstract class BaseBuilding : PoolableObject
             RatManager.Instance.AddBuilding(this);
         }
     }
+    
+    protected void Destroy() {
+        transform.parent.gameObject.SetActive(false);
+    }
 
-    protected override void OnDisable() {
+    protected void OnDisable() {
         if (GameManager.Instance != null) {
             GameManager.Instance.dayDelegate -= DayAction;
             GameManager.Instance.townCrierDelegate -= TownCrierAction;
@@ -48,8 +55,6 @@ public abstract class BaseBuilding : PoolableObject
         if (RatManager.Instance != null) {
             RatManager.Instance.RemoveBuilding(this);
         }
-
-        base.OnDisable();
     }
 
     protected abstract void DayAction();
