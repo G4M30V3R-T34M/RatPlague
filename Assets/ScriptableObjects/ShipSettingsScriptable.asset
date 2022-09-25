@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8901e8cbc134c4bada601a604923a9, type: 3}
   m_Name: ShipSettingsScriptable
   m_EditorClassIdentifier: 
-  ColorOnMouseEnter: {r: 0, g: 0, b: 0, a: 0}
+  ColorOnMouseEnter: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}
   maxRats: 0
   ratsKilledChance: 0
   maxFood: 0

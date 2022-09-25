@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4868f9c3c275502428795c6ddd8192d2, type: 3}
   m_Name: BarraksSettingsScriptable
   m_EditorClassIdentifier: 
-  ColorOnMouseEnter: {r: 0, g: 0, b: 0, a: 0}
+  ColorOnMouseEnter: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
   maxRats: 0
   ratsKilledChance: 0
   maxFood: 0
