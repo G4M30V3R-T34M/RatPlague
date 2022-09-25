@@ -42,7 +42,6 @@ public class Street : Singleton<Street>
         FeedRats();
         ReproduceRats();
         StartCoroutine(UpdateAvailableFood());
-        HUDManager.Instance.totalFood = food;
     }
 
     protected void FeedRats() {
@@ -71,6 +70,7 @@ public class Street : Singleton<Street>
         yield return null;
         availableFood += generatedFood;
         generatedFood = 0;
+        HUDManager.Instance.totalFood = food;
     }
 
     public bool HasAvaibleRats(int desiredRats) {
