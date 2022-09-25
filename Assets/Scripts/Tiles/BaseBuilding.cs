@@ -12,7 +12,7 @@ public abstract class BaseBuilding : MonoBehaviour
     protected new Collider2D collider;
 
     Color defaultColor;
-    protected int assignedRats;
+    public int assignedRats { get; protected set; }
     protected int currentFood;
 
     private bool executedStart = false;
@@ -33,6 +33,7 @@ public abstract class BaseBuilding : MonoBehaviour
         if (executedStart) {
             GameManager.Instance.day += DayAction;
             GameManager.Instance.townCrierDelegate += TownCrierAction;
+            RatManager.Instance.AddBuilding(this);
         }
     }
 
@@ -40,6 +41,9 @@ public abstract class BaseBuilding : MonoBehaviour
         if (GameManager.Instance != null) {
             GameManager.Instance.day -= DayAction;
             GameManager.Instance.townCrierDelegate -= TownCrierAction;
+        }
+        if (RatManager.Instance != null) {
+            RatManager.Instance.RemoveBuilding(this);
         }
     }
 

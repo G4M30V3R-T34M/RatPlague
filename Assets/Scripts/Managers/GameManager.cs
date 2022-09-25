@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Feto;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using TMPro;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -29,8 +26,12 @@ public class GameManager : Singleton<GameManager>
                 break;
             case GameStates.TownCrier:
                 if (townCrierDelegate != null) { townCrierDelegate(); };
-                CrierManager.Instance.DisplayInfo();
-                // TODO perform crier action
+                iterations++;
+                if (iterations < _settings.totalIterations) {
+                    CrierManager.Instance.DisplayInfo();
+                } else {
+                    GameOverManager.Instance.EndGame(GameOverCondition.Quarantine);
+                }
                 break;
             case GameStates.Pause:
                 // TODO perform pause action
