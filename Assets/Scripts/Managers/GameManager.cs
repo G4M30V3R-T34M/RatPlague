@@ -33,7 +33,7 @@ public class GameManager : Singleton<GameManager>
                     GameOverManager.Instance.EndGame(GameOverCondition.Quarantine);
                 }
                 break;
-            case GameStates.Pause:
+            case GameStates.CrierAssign:
                 // TODO perform pause action
                 UpdateGameState(GameStates.Play);
                 break;
