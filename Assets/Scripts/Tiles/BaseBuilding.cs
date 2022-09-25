@@ -80,7 +80,6 @@ public abstract class BaseBuilding : MonoBehaviour
     public void MouseLeftClick(int iteration) {
         int ratsToAssign = 1; // TODO change this to use with iterations
         if (Street.Instance.HasAvaibleRats(ratsToAssign)) {
-            print(ratsToAssign);
             assignedRats += ratsToAssign;
             Street.Instance.Unassign(ratsToAssign);
         }
