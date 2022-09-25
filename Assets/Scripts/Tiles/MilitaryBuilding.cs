@@ -13,6 +13,7 @@ public class MilitaryBuilding : House
     protected void CheckMilitaryPower() {
         int notDistracted = _settings.ratsNeededForDistraction - assignedRats;
         if (notDistracted > 0) {
+            CrierManager.Instance.deathRats += notDistracted;
             Street.Instance.Unassign(notDistracted);
         }
     }
