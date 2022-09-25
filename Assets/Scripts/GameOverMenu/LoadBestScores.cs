@@ -10,10 +10,6 @@ public class LoadBestScores : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI[] bestScores;
 
-    private void Start() {
-        Load();
-    }
-
     public void Load() {
         for (int i = 0; i < bestScores.Length; i++) {
             LoadBestScore(bestScores[i], i + 1);

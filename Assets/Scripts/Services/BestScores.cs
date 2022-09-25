@@ -7,8 +7,9 @@ public static class BestScores
     const string NAME_KEY = "name", SCORE_KEY = "score";
 
     public static bool IsNewRecord(int value) {
-        int score5th = PlayerPrefs.GetInt(SCORE_KEY + "5", 0);
-        return value > score5th;
+        int score5th = GetScore(5, 0);
+        string name5th = GetName(5, "");
+        return value > score5th || (score5th == 0 && name5th == "");
     }
 
     public static bool SaveScore(string name, int score) {
@@ -19,7 +20,10 @@ public static class BestScores
         int currentScore = score;
 
         while (!found && position <= 5) {
-            if (currentScore > GetScore(position)) {
+            if (
+                currentScore > GetScore(position) ||
+                GetScore(position, 0) == 0
+            ) {
                 found = true;
             } else {
                 position++;
