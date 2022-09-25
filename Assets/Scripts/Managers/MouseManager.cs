@@ -3,19 +3,13 @@ using Feto;
 
 public class MouseManager : SingletonPersistent<MouseManager>
 {
-    Camera mainCamera;
+    [SerializeField] GameObject MousePointer;
 
     void Start() {
         Cursor.visible = false;
     }
 
     void Update() {
-        if (mainCamera == null) { FindMainCamera(); }
-        Vector2 position = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = position;
-    }
-
-    private void FindMainCamera() {
-        mainCamera = Camera.main;
+        MousePointer.transform.position = Input.mousePosition;
     }
 }
