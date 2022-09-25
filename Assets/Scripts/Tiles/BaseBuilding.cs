@@ -44,7 +44,7 @@ public abstract class BaseBuilding : MonoBehaviour
     }
     
     protected void Destroy() {
-        transform.parent.gameObject.SetActive(false);
+        BuildingsManager.Instance.DestroyBuilding(this, _settings);
     }
 
     protected void OnDisable() {

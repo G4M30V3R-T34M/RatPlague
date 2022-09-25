@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38857cf7a132b2f48809e043459f0d7a, type: 3}
+  m_Name: BuildingSpawnScriptable
+  m_EditorClassIdentifier: 
+  minX: -7
+  maxX: 1.7
+  minY: -2
+  maxY: 3
+  xDist: 1.5
+  yDist: 1.5

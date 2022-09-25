@@ -15,6 +15,12 @@ public class GameManager : Singleton<GameManager>
 
     private void Start() {
         iterations = 0;
+
+        // TODO: Create Buildings
+        BuildingsManager.Instance.CreateHouse(false);
+        BuildingsManager.Instance.CreateWareHouse(false);
+        BuildingsManager.Instance.CreateBarrak(false);
+
         UpdateGameState(GameStates.Play);
     }
 
