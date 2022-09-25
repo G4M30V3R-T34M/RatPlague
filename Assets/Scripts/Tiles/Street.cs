@@ -22,6 +22,10 @@ public class Street : Singleton<Street>
         availableFood = food;
         executedStart = true;
         OnEnable();
+        // Update HUD
+        HUDManager.Instance.totalRats = rats;
+        HUDManager.Instance.totalFood = food;
+        HUDManager.Instance.UpdateGeneralInfoHUD();
     }
 
     protected void OnEnable() {

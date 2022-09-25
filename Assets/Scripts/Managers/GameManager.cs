@@ -7,6 +7,7 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] GameManagerScriptable _settings;
     private int iterations;
+    private int totalDays;
     GameStates state;
 
     public delegate void DayAction();
@@ -33,11 +34,6 @@ public class GameManager : Singleton<GameManager>
                     EndGameManager.Instance.EndGame(GameOverCondition.Quarantine);
                 }
                 break;
-            case GameStates.CrierAssign:
-                // TODO perform pause action
-                // TMP bypass due crier assign not implemented yet
-                UpdateGameState(GameStates.Play);
-                break;
             case GameStates.GameOver:
                 // TODO perform gameOver action
                 break;
@@ -51,6 +47,8 @@ public class GameManager : Singleton<GameManager>
             dayDelegate();
             yield return null;
             yield return null;
+            totalDays += 1;
+            HUDManager.Instance.totalDays = totalDays;
             HUDManager.Instance.UpdateGeneralInfoHUD();
             iterationDay += 1;
         }

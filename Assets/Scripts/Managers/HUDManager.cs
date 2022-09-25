@@ -6,6 +6,9 @@ using TMPro;
 
 public class HUDManager : Singleton<HUDManager>
 {
+    [Header("Day information")]
+    [SerializeField] TextMeshProUGUI dayText;
+
     [Header("General information")] 
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI ratsText;
@@ -18,6 +21,7 @@ public class HUDManager : Singleton<HUDManager>
     [SerializeField] TextMeshProUGUI buildingFoodText;
 
     // General info
+    public int totalDays;
     public int totalRats;
     public int totalFood;
 
@@ -30,6 +34,7 @@ public class HUDManager : Singleton<HUDManager>
 
 
     public void UpdateGeneralInfoHUD() {
+        dayText.SetText(totalDays.ToString());
         scoreText.SetText(ScoreManager.Instance.score.ToString());
         ratsText.SetText(totalRats.ToString());
         foodText.SetText(totalFood.ToString());
