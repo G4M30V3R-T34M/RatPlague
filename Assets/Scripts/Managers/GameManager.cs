@@ -34,9 +34,6 @@ public class GameManager : Singleton<GameManager>
                     EndGameManager.Instance.EndGame(GameOverCondition.Quarantine);
                 }
                 break;
-            case GameStates.GameOver:
-                // TODO perform gameOver action
-                break;
         }
     }
 
