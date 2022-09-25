@@ -10,14 +10,14 @@ public class RatManager : Singleton<RatManager>
 
     protected void Start() {
         buildings = new List<BaseBuilding>();
-        GameManager.Instance.day += RatCheck;
+        GameManager.Instance.dayDelegate += RatCheck;
     }
 
     protected override void OnDestroy() {
         base.OnDestroy();
         StopCoroutine(ratCheckCoroutine);
         if (GameManager.Instance != null) {
-            GameManager.Instance.day -= RatCheck;
+            GameManager.Instance.dayDelegate -= RatCheck;
         }
     }
 

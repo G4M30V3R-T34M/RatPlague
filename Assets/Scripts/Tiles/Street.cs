@@ -26,13 +26,13 @@ public class Street : Singleton<Street>
 
     protected void OnEnable() {
         if (executedStart) {
-            GameManager.Instance.day += DayAction;
+            GameManager.Instance.dayDelegate += DayAction;
         }
     }
 
     protected void OnDisable() {
         if (GameManager.Instance != null) {
-            GameManager.Instance.day -= DayAction;
+            GameManager.Instance.dayDelegate -= DayAction;
         }
     }
 

@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
     GameStates state;
 
     public delegate void DayAction();
-    public event DayAction day, townCrierDelegate;
+    public event DayAction dayDelegate, townCrierDelegate;
 
     private void Start() {
         iterations = 0;
@@ -47,7 +47,7 @@ public class GameManager : Singleton<GameManager>
         int iterationDay = 0;
         while(iterationDay < _settings.daysPerIteration) {
             yield return new WaitForSeconds(_settings.secondsPerDay);
-            day.Invoke();
+            dayDelegate.Invoke();
             yield return null;
             yield return null;
             HUDManager.Instance.UpdateGeneralInfoHUD();

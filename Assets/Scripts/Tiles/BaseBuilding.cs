@@ -33,7 +33,7 @@ public abstract class BaseBuilding : MonoBehaviour
 
     private void OnEnable() {
         if (executedStart) {
-            GameManager.Instance.day += DayAction;
+            GameManager.Instance.dayDelegate += DayAction;
             GameManager.Instance.townCrierDelegate += TownCrierAction;
             RatManager.Instance.AddBuilding(this);
         }
@@ -41,7 +41,7 @@ public abstract class BaseBuilding : MonoBehaviour
 
     private void OnDisable() {
         if (GameManager.Instance != null) {
-            GameManager.Instance.day -= DayAction;
+            GameManager.Instance.dayDelegate -= DayAction;
             GameManager.Instance.townCrierDelegate -= TownCrierAction;
         }
         if (RatManager.Instance != null) {
@@ -56,7 +56,7 @@ public abstract class BaseBuilding : MonoBehaviour
         tileIcon.color = _settings.ColorOnMouseEnter;
         // Display info of the tile
         DisplayBuildingInfo();
-        GameManager.Instance.day += UpdateBuildingHUB;
+        GameManager.Instance.dayDelegate += UpdateBuildingHUB;
     }
 
     private void DisplayBuildingInfo() {
@@ -71,7 +71,7 @@ public abstract class BaseBuilding : MonoBehaviour
     private void OnMouseExit() {
         tileIcon.color = defaultColor;
         HUDManager.Instance.UpdateStreetInfoHUD();
-        GameManager.Instance.day -= UpdateBuildingHUB;
+        GameManager.Instance.dayDelegate -= UpdateBuildingHUB;
         if(UpdateBuildingHUBCoroutine != null) {
             StopCoroutine(UpdateBuildingHUBCoroutine);
         }
