@@ -39,6 +39,7 @@ public class Ship : BaseBuilding
         daysInSameState = 0;
         state = ShipState.Navigating;
         CheckHumansInfected();
+        CrierManager.Instance.deathRats += assignedRats;
         assignedRats = 0;
     }
 
