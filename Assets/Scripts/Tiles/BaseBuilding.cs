@@ -79,7 +79,8 @@ public abstract class BaseBuilding : MonoBehaviour
 
     public void MouseLeftClick(int iteration) {
         int ratsToAssign = 1; // TODO change this to use with iterations
-        if (Street.Instance.HasAvaibleRats(ratsToAssign)) {
+        if (Street.Instance.HasAvaibleRats(ratsToAssign)
+                && assignedRats < _settings.maxRats) {
             assignedRats += ratsToAssign;
             Street.Instance.Unassign(ratsToAssign);
         }
