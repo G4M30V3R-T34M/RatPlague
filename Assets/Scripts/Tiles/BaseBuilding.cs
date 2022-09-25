@@ -52,19 +52,32 @@ public abstract class BaseBuilding : MonoBehaviour
 
     private void OnMouseEnter() {
         tileIcon.color = _settings.ColorOnMouseEnter;
-        // TODO Get tile info to display
+        // Display info of the tile
+        DisplayBuildingInfo();
+    }
+
+    private void DisplayBuildingInfo() {
+        HUDManager.Instance.buildingName = _settings.buildingName;
+        HUDManager.Instance.buildingDescription = _settings.buildingDescription;
+        HUDManager.Instance.buildingCurrentRats = assignedRats;
+        HUDManager.Instance.buildingMaxRats = _settings.maxRats;
+        HUDManager.Instance.buildingFood = currentFood;
+        HUDManager.Instance.UpdateBuildingInfoHUD();
     }
 
     private void OnMouseExit() {
         tileIcon.color = defaultColor;
+        HUDManager.Instance.UpdateStreetInfoHUD();
     }
 
     public void MouseLeftClick(int iteration) {
         int ratsToAssign = 1; // TODO change this to use with iterations
         if (Street.Instance.HasAvaibleRats(ratsToAssign)) {
+            print(ratsToAssign);
             assignedRats += ratsToAssign;
             Street.Instance.Unassign(ratsToAssign);
         }
+        DisplayBuildingInfo();
     }
 
     public void MouseRightClick(int iteration) {
@@ -73,6 +86,7 @@ public abstract class BaseBuilding : MonoBehaviour
             assignedRats -= ratsToUnassign;
             Street.Instance.Assign(ratsToUnassign);
         }
+        DisplayBuildingInfo();
     }
 
     public float GetRatOccupationRatio() {

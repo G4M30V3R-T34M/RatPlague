@@ -49,6 +49,7 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForSeconds(_settings.secondsPerDay);
             day.Invoke();
             yield return null;
+            yield return null;
             HUDManager.Instance.UpdateGeneralInfoHUD();
             iterationDay += 1;
         }
