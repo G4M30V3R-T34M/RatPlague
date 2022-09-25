@@ -53,7 +53,7 @@ public class ScrollManager : Singleton<ScrollManager>
                 prevScrollState = ScrollStates.BornAndDeath;
                 break;
             case ScrollStates.Exit:
-                GameManager.Instance.UpdateGameState(GameStates.Pause);
+                GameManager.Instance.UpdateGameState(GameStates.CrierAssign);
                 gameObject.SetActive(false);
                 break;
             case ScrollStates.None:

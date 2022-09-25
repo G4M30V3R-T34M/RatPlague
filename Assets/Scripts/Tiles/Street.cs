@@ -26,14 +26,14 @@ public class Street : Singleton<Street>
 
     protected void OnEnable() {
         if (executedStart) {
-            GameManager.Instance.day += DayAction;
+            GameManager.Instance.dayDelegate += DayAction;
             GameManager.Instance.townCrierDelegate += TownCrierAction;
-	}
+        }
     }
 
     protected void OnDisable() {
         if (GameManager.Instance != null) {
-            GameManager.Instance.day -= DayAction;
+            GameManager.Instance.dayDelegate -= DayAction;
             GameManager.Instance.townCrierDelegate -= TownCrierAction;
         }
     }
@@ -42,10 +42,6 @@ public class Street : Singleton<Street>
         FeedRats();
         ReproduceRats();
         StartCoroutine(UpdateAvailableFood());
-    }
-
-    protected void TownCrierAction() {
-        CrierManager.Instance.currentFood = food;
     }
 
     protected void FeedRats() {
@@ -67,10 +63,15 @@ public class Street : Singleton<Street>
         rats += newRats;
     }
 
+    protected void TownCrierAction() {
+        CrierManager.Instance.currentFood = food;
+    }
+
     IEnumerator UpdateAvailableFood() {
         yield return null;
         availableFood += generatedFood;
         generatedFood = 0;
+        HUDManager.Instance.totalFood = food;
     }
 
     public bool HasAvaibleRats(int desiredRats) {

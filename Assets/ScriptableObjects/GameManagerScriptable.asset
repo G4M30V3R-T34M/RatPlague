@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd3050b96dcbbf74bb9877019581a725, type: 3}
   m_Name: GameManagerScriptable
   m_EditorClassIdentifier: 
-  daysPerIteration: 2
-  totalIterations: 1
-  secondsPerDay: 3
+  daysPerIteration: 4
+  totalIterations: 5
+  secondsPerDay: 4

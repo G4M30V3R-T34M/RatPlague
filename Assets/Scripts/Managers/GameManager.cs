@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
     GameStates state;
 
     public delegate void DayAction();
-    public event DayAction day, townCrierDelegate;
+    public event DayAction dayDelegate, townCrierDelegate;
 
     private void Start() {
         iterations = 0;
@@ -33,8 +33,10 @@ public class GameManager : Singleton<GameManager>
                     GameOverManager.Instance.EndGame(GameOverCondition.Quarantine);
                 }
                 break;
-            case GameStates.Pause:
+            case GameStates.CrierAssign:
                 // TODO perform pause action
+                // TMP bypass due crier assign not implemented yet
+                UpdateGameState(GameStates.Play);
                 break;
             case GameStates.GameOver:
                 // TODO perform gameOver action
@@ -46,7 +48,10 @@ public class GameManager : Singleton<GameManager>
         int iterationDay = 0;
         while(iterationDay < _settings.daysPerIteration) {
             yield return new WaitForSeconds(_settings.secondsPerDay);
-            day.Invoke();
+            dayDelegate();
+            yield return null;
+            yield return null;
+            HUDManager.Instance.UpdateGeneralInfoHUD();
             iterationDay += 1;
         }
         UpdateGameState(GameStates.TownCrier);

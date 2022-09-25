@@ -17,6 +17,8 @@ public abstract class BaseBuilding : MonoBehaviour
 
     private bool executedStart = false;
 
+    private Coroutine UpdateBuildingHUDCoroutine;
+
     protected virtual void Awake() {
         tileIcon = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
@@ -31,7 +33,7 @@ public abstract class BaseBuilding : MonoBehaviour
 
     private void OnEnable() {
         if (executedStart) {
-            GameManager.Instance.day += DayAction;
+            GameManager.Instance.dayDelegate += DayAction;
             GameManager.Instance.townCrierDelegate += TownCrierAction;
             RatManager.Instance.AddBuilding(this);
         }
@@ -39,7 +41,7 @@ public abstract class BaseBuilding : MonoBehaviour
 
     private void OnDisable() {
         if (GameManager.Instance != null) {
-            GameManager.Instance.day -= DayAction;
+            GameManager.Instance.dayDelegate -= DayAction;
             GameManager.Instance.townCrierDelegate -= TownCrierAction;
         }
         if (RatManager.Instance != null) {
@@ -52,11 +54,27 @@ public abstract class BaseBuilding : MonoBehaviour
 
     private void OnMouseEnter() {
         tileIcon.color = _settings.ColorOnMouseEnter;
-        // TODO Get tile info to display
+        // Display info of the tile
+        DisplayBuildingInfo();
+        GameManager.Instance.dayDelegate += UpdateBuildingHUD;
+    }
+
+    private void DisplayBuildingInfo() {
+        HUDManager.Instance.buildingName = _settings.buildingName;
+        HUDManager.Instance.buildingDescription = _settings.buildingDescription;
+        HUDManager.Instance.buildingCurrentRats = assignedRats;
+        HUDManager.Instance.buildingMaxRats = _settings.maxRats;
+        HUDManager.Instance.buildingFood = currentFood;
+        HUDManager.Instance.UpdateBuildingInfoHUD();
     }
 
     private void OnMouseExit() {
         tileIcon.color = defaultColor;
+        HUDManager.Instance.UpdateStreetInfoHUD();
+        GameManager.Instance.dayDelegate -= UpdateBuildingHUD;
+        if(UpdateBuildingHUDCoroutine != null) {
+            StopCoroutine(UpdateBuildingHUDCoroutine);
+        }
     }
 
     public void MouseLeftClick(int iteration) {
@@ -65,6 +83,7 @@ public abstract class BaseBuilding : MonoBehaviour
             assignedRats += ratsToAssign;
             Street.Instance.Unassign(ratsToAssign);
         }
+        DisplayBuildingInfo();
     }
 
     public void MouseRightClick(int iteration) {
@@ -73,10 +92,23 @@ public abstract class BaseBuilding : MonoBehaviour
             assignedRats -= ratsToUnassign;
             Street.Instance.Assign(ratsToUnassign);
         }
+        DisplayBuildingInfo();
     }
 
     public float GetRatOccupationRatio() {
         return assignedRats / _settings.maxRats;
+    }
+
+    protected void UpdateBuildingHUD() {
+        if (UpdateBuildingHUDCoroutine != null) {
+            StopCoroutine(UpdateBuildingHUDCoroutine);
+        }
+        UpdateBuildingHUDCoroutine = StartCoroutine(UpdateHUDCoroutine());
+    }
+
+    protected IEnumerator UpdateHUDCoroutine() {
+        yield return null;
+        DisplayBuildingInfo();
     }
 
 }

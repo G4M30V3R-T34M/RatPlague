@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1f049ba15c3144aa60502fb87f4c78, type: 3}
   m_Name: WarehouseSettingsScriptable
   m_EditorClassIdentifier: 
-  ColorOnMouseEnter: {r: 0, g: 0, b: 0, a: 0}
-  maxRats: 0
-  ratsKilledChance: 0
-  maxFood: 0
-  minFoodGenerated: 0
-  maxFoodGenerated: 0
-  streetFoodGenerationChance: 0
-  humansKilledChance: 0
-  destructionChance: 0
-  ratsKilledOnDestructionChance: 0
+  buildingName: Warehouse
+  buildingDescription: TODO improve warehouse
+  maxRats: 25
+  ratsKilledChance: 0.3
+  maxFood: 200
+  minFoodGenerated: 5
+  maxFoodGenerated: 15
+  streetFoodGenerationChance: 0.05
+  humansKilledChance: 2.51
+  destructionChance: 0.166
+  ratsKilledOnDestructionChance: 0.531
+  ColorOnMouseEnter: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}

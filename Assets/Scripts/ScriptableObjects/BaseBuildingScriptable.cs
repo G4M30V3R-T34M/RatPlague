@@ -5,7 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BaseBuildingScriptable", menuName = "Scriptables/BaseBuildingScriptable", order = 2)]
 public class BaseBuildingScriptable : ScriptableObject
 {
-    public Color ColorOnMouseEnter;
+    [Header("General Info")]
+    public string buildingName;
+    public string buildingDescription;
 
     [Header("Rats Info")]
     public int maxRats;
@@ -23,4 +25,7 @@ public class BaseBuildingScriptable : ScriptableObject
     [Header("Structure Info")]
     [Range(0.0f, 1.0f)] public float destructionChance;
     [Range(0.0f, 1.0f)] public float ratsKilledOnDestructionChance;
+
+    [Header("Other configurations")]
+    public Color ColorOnMouseEnter;
 } 
