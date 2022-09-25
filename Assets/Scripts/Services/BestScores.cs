@@ -39,12 +39,12 @@ public static class BestScores
         return found;
     }
 
-    public static int GetScore(int position) {
-        return PlayerPrefs.GetInt(SCORE_KEY + position.ToString(), 0);
+    public static int GetScore(int position, int placeholder = 0) {
+        return PlayerPrefs.GetInt(SCORE_KEY + position.ToString(), placeholder);
     }
 
-    public static string GetName(int position) {
-        return PlayerPrefs.GetString(NAME_KEY + position.ToString(), "");
+    public static string GetName(int position, string placeholder = "") {
+        return PlayerPrefs.GetString(NAME_KEY + position.ToString(), placeholder);
     }
 
     private static void SetScore(int position, int score) {

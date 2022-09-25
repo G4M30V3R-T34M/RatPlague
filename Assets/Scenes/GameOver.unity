@@ -311,6 +311,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102336444}
   m_CullTransparentMesh: 1
+--- !u!114 &136338453 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 763708377759283318, guid: 1a17f8f573706a847948cd36826a1d4b, type: 3}
+  m_PrefabInstance: {fileID: 1938587096}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &215890972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -652,6 +663,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446389458}
   m_CullTransparentMesh: 1
+--- !u!114 &524243871 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 763708377759283318, guid: 1a17f8f573706a847948cd36826a1d4b, type: 3}
+  m_PrefabInstance: {fileID: 8044500305103783197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &621918045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -908,6 +930,7 @@ GameObject:
   - component: {fileID: 729870687}
   - component: {fileID: 729870689}
   - component: {fileID: 729870688}
+  - component: {fileID: 729870690}
   m_Layer: 5
   m_Name: BestScoresPanel
   m_TagString: Untagged
@@ -974,6 +997,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729870686}
   m_CullTransparentMesh: 1
+--- !u!114 &729870690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729870686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcca1c8b04ca2f04f98b1c2ba8648ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  namePlaceholder: _ _ _
+  scorePlaceholder: 0
+  bestScores:
+  - {fileID: 524243871}
+  - {fileID: 1600844184}
+  - {fileID: 1370783953}
+  - {fileID: 136338453}
+  - {fileID: 2026610328}
 --- !u!1001 &737455468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1895,6 +1938,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279124054}
   m_CullTransparentMesh: 1
+--- !u!114 &1370783953 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 763708377759283318, guid: 1a17f8f573706a847948cd36826a1d4b, type: 3}
+  m_PrefabInstance: {fileID: 737455468}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1498063366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,6 +2017,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1600844184 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 763708377759283318, guid: 1a17f8f573706a847948cd36826a1d4b, type: 3}
+  m_PrefabInstance: {fileID: 1218483520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1741061115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,7 +2040,7 @@ GameObject:
   - component: {fileID: 1741061118}
   - component: {fileID: 1741061117}
   m_Layer: 5
-  m_Name: BestScores
+  m_Name: BestScoresTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2562,6 +2627,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997220988}
   m_CullTransparentMesh: 1
+--- !u!114 &2026610328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 763708377759283318, guid: 1a17f8f573706a847948cd36826a1d4b, type: 3}
+  m_PrefabInstance: {fileID: 215890972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8044500305103783197
 PrefabInstance:
   m_ObjectHideFlags: 0
