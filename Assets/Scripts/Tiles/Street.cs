@@ -92,6 +92,7 @@ public class Street : Singleton<Street>
 
     public void Unassign(int ratsToUnassign) {
         rats -= ratsToUnassign;
+        rats = Mathf.Clamp(rats, 0, 100);
     }
 
 }
