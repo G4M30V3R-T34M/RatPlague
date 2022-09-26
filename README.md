@@ -1,7 +1,16 @@
 # Rat Plague
 Game for [Indie Spain Jam 2022](https://itch.io/jam/indie-spain-jam)
-## Assets
 
+**Theme:** From 0 to 100
+
+**Sub theme:** replayability
+## Description
+As a rat your objective is reproduce your specie and spread the black plague. To fulfill your mission, assign your rats to the different buildings, but be careful due your rats may die in the buildings. Also control your reproduction, if humans see too many rats (100) they will be quarantined and you will lose.
+
+## Credits
+**Game Developed by G4M30V3R T34M**
+### Art
+ - @Neengash (Instagram, Github, itch.io)
 ### Fonts
  - [Darker](https://www.dafont.com/darker.font) by Kong Font - ONLY for NON COMMERCIAL USE or PERSONAL USE ONLY
  - [Cardinal](https://www.dafont.com/cardinal.font?fpp=200) by Steffmann - 100% free
