@@ -16,8 +16,7 @@ public class GameManager : Singleton<GameManager>
     private void Start() {
         iterations = 0;
         BuildingsManager.Instance.CreateStartingBuildings();
-
-        UpdateGameState(GameStates.Play);
+        StartAssignManager.Instance.gameObject.SetActive(true);
     }
 
     public void UpdateGameState(GameStates newState) {
