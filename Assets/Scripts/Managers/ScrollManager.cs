@@ -14,6 +14,9 @@ public class ScrollManager : Singleton<ScrollManager>
     [Tooltip("All details that should be hidden when crier assign")]
     [SerializeField] GameObject Scroll;
 
+    [Header("Crier Assign")]
+    [SerializeField] GameObject CrierAssign;
+
 
     [Header("Buttons")]
     [SerializeField] GameObject PreviousButton;
@@ -39,6 +42,7 @@ public class ScrollManager : Singleton<ScrollManager>
                 GeneralInfo.SetActive(true);
                 BornAndDeath.SetActive(false);
                 Buildings.SetActive(false);
+                CrierAssign.SetActive(false);
                 nextScrollState = ScrollStates.BornAndDeath;
                 prevScrollState = ScrollStates.None;
                 PreviousButton.SetActive(false);
@@ -48,6 +52,7 @@ public class ScrollManager : Singleton<ScrollManager>
                 BornAndDeath.SetActive(true);
                 Buildings.SetActive(false);
                 PreviousButton.SetActive(true);
+                CrierAssign.SetActive(false);
                 nextScrollState = ScrollStates.Buildings;
                 prevScrollState = ScrollStates.GeneralInfo;
                 break;
@@ -56,6 +61,7 @@ public class ScrollManager : Singleton<ScrollManager>
                 GeneralInfo.SetActive(false);
                 BornAndDeath.SetActive(false);
                 Buildings.SetActive(true);
+                CrierAssign.SetActive(false);
                 nextScrollState = ScrollStates.Assign;
                 prevScrollState = ScrollStates.BornAndDeath;
                 break;
@@ -64,6 +70,7 @@ public class ScrollManager : Singleton<ScrollManager>
                 GeneralInfo.SetActive(false);
                 BornAndDeath.SetActive(false);
                 Buildings.SetActive(false);
+                CrierAssign.SetActive(true);
                 prevScrollState = ScrollStates.Buildings;
                 nextScrollState = ScrollStates.Exit;
                 break;
