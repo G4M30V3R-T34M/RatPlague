@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: BarraksSettingsScriptable
   m_EditorClassIdentifier: 
   buildingName: 2
-  buildingDescription: TODO improve
+  buildingDescription: Assign at leats 5 rats, or street rats will be killed
   maxRats: 20
   ratsKilledChance: 0.01
+  startingFood: 0
   maxFood: 300
   minFoodGenerated: 10
   maxFoodGenerated: 40

@@ -10,6 +10,6 @@ public class EndGameManager : SingletonPersistent<EndGameManager>
 
     public void EndGame(GameOverCondition cause) {
         endGameCause = cause;
-        SceneManager.ChangeScene(Scenes.GameOver);
+        SceneManager.Instance.ChangeScene(Scenes.GameOver);
     }
 }

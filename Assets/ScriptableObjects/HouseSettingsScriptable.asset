@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1f049ba15c3144aa60502fb87f4c78, type: 3}
   m_Name: HouseSettingsScriptable
   m_EditorClassIdentifier: 
-  buildingName: House
-  buildingDescription: TODO improve house
+  buildingName: 0
+  buildingDescription: Infects lots of humans, generates some food
   maxRats: 20
   ratsKilledChance: 0.2
+  startingFood: 0
   maxFood: 500
   minFoodGenerated: 15
   maxFoodGenerated: 50

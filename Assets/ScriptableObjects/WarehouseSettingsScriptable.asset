@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: WarehouseSettingsScriptable
   m_EditorClassIdentifier: 
   buildingName: 1
-  buildingDescription: TODO improve warehouse
+  buildingDescription: Generates high levels of food, but only infects a little
   maxRats: 25
   ratsKilledChance: 0.3
+  startingFood: 0
   maxFood: 200
   minFoodGenerated: 5
   maxFoodGenerated: 15
