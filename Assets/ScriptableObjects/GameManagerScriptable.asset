@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GameManagerScriptable
   m_EditorClassIdentifier: 
   daysPerIteration: 10
-  totalIterations: 10
+  totalIterations: 5
   secondsPerDay: 3

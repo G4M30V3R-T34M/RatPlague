@@ -46,7 +46,7 @@ public class GameManager : Singleton<GameManager>
             dayDelegate();
             yield return null;
             yield return null;
-            totalDays += 1;
+            totalDays += 2;
             HUDManager.Instance.totalDays = totalDays;
             HUDManager.Instance.UpdateGeneralInfoHUD();
             iterationDay += 1;
