@@ -44,7 +44,9 @@ public abstract class BaseBuilding : MonoBehaviour
         if (executedStart) {
             GameManager.Instance.dayDelegate += DayAction;
             GameManager.Instance.townCrierDelegate += TownCrierAction;
-            RatManager.Instance.AddBuilding(this);
+            if(_settings.buildingName != Buildings.Ship) {
+                RatManager.Instance.AddBuilding(this);
+            }
         }
     }
     
