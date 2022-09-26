@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: ShipSettingsScriptable
   m_EditorClassIdentifier: 
   buildingName: 3
-  buildingDescription: TODO improve
+  buildingDescription: Rats here don't count towards the max 100 rats
   maxRats: 30
   ratsKilledChance: 1
+  startingFood: 0
   maxFood: 0
   minFoodGenerated: 0
   maxFoodGenerated: 0
