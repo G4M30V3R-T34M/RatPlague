@@ -39,8 +39,10 @@ public class CrierManager : Singleton<CrierManager>
     public Dictionary<Buildings, int> destroyedBuildings { get; set; }
     public Dictionary<Buildings, int> newBuildings { get; set; }
 
-    void Start()
-    {
+    private AudioSource crierSound;
+
+    void Start() {
+        crierSound = GetComponent<AudioSource>();
         previousScore = 0;
         currentRats = 0;
         currentFood = Street.Instance.food;
@@ -68,6 +70,7 @@ public class CrierManager : Singleton<CrierManager>
     }
 
     public void DisplayInfo() {
+        crierSound.Play();
         scrollCanvas.gameObject.SetActive(true);
         ScrollManager.Instance.SetUp();
         FillInfo();

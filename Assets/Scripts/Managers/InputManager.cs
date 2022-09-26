@@ -9,6 +9,12 @@ public class InputManager : MonoBehaviour
 
     Coroutine assignCoroutineReference;
 
+    AudioSource clickAudio;
+
+    private void Awake() {
+        clickAudio = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (Input.GetButtonDown("LeftClick") || Input.GetButtonDown("RightClick")) {
@@ -36,6 +42,7 @@ public class InputManager : MonoBehaviour
     }
 
     private void PerformClick(bool isLeft, int iteration) {
+        clickAudio.Play();
         RaycastHit2D hit = Physics2D.Raycast(mainCamera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (hit) {
             BaseBuilding building = hit.collider.gameObject.GetComponent<BaseBuilding>();
