@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9214146662266660351}
   - component: {fileID: 9214146662266660346}
   - component: {fileID: 9214146662266660345}
-  - component: {fileID: 9214146662266660344}
+  - component: {fileID: 4340925939136013086}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.355331, y: 1.8745234}
   m_EdgeRadius: 0
---- !u!114 &9214146662266660344
+--- !u!114 &4340925939136013086
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9214146662266660350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59fcaa07966a6ab44b89984011bc83f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2abcaf2320dd779498f0188178ce1df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _settings: {fileID: 11400000, guid: 3f2484b571bdd524d8d9bc645966e1b0, type: 2}

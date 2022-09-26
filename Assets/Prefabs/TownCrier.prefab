@@ -2304,7 +2304,7 @@ GameObject:
   - component: {fileID: 533844906998893642}
   - component: {fileID: 533844906998893643}
   m_Layer: 0
-  m_Name: HouseDestroyed
+  m_Name: HouseNew
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3293,7 +3293,7 @@ GameObject:
   - component: {fileID: 533844907506497894}
   - component: {fileID: 533844907506497895}
   m_Layer: 0
-  m_Name: HouseNew
+  m_Name: HouseDestroyed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3801,8 +3801,8 @@ MonoBehaviour:
   foodCurrentText: {fileID: 533844907418233159}
   bornText: {fileID: 533844906238576705}
   deathText: {fileID: 533844905770799081}
-  createdHouseText: {fileID: 533844907506497895}
-  destroyedHouseText: {fileID: 533844906998893643}
+  createdHouseText: {fileID: 533844906998893643}
+  destroyedHouseText: {fileID: 533844907506497895}
   createdWareHouseText: {fileID: 533844906452665372}
   destroyedWareHouseText: {fileID: 533844906245355458}
   createdBarracsText: {fileID: 533844906482914197}

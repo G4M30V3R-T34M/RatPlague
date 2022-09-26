@@ -50,6 +50,7 @@ MonoBehaviour:
   housePool: {fileID: 2927991887796898558}
   warehousePool: {fileID: 2927991887421916710}
   barraksPool: {fileID: 2927991887910789267}
+  _settings: {fileID: 11400000, guid: c7e05d5f6566e9b4cba58560d312d520, type: 2}
 --- !u!1 &2927991887421916712
 GameObject:
   m_ObjectHideFlags: 0
