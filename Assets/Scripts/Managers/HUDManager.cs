@@ -32,6 +32,25 @@ public class HUDManager : Singleton<HUDManager>
     public int buildingMaxRats;
     public int buildingFood;
 
+    public bool StreetSelected = true;
+
+    private void Start() {
+        GameManager.Instance.dayDelegate += UpdateStreetData;
+    }
+
+    protected override void OnDestroy() {
+        if (GameManager.Instance != null) {
+            GameManager.Instance.dayDelegate -= UpdateStreetData;
+        }
+        base.OnDestroy();
+    }
+
+    protected void UpdateStreetData() {
+        if (StreetSelected) {
+            UpdateStreetInfoHUD();
+        }
+    }
+
 
     public void UpdateGeneralInfoHUD() {
         dayText.SetText(totalDays.ToString());
@@ -41,6 +60,7 @@ public class HUDManager : Singleton<HUDManager>
     }
 
     public void UpdateBuildingInfoHUD() {
+        StreetSelected = false;
         buildingNameText.SetText(buildingName);
         buildingDescriptionText.SetText(buildingDescription);
         buildingRatsText.SetText(
@@ -52,6 +72,7 @@ public class HUDManager : Singleton<HUDManager>
     }
 
     public void UpdateStreetInfoHUD() {
+        StreetSelected = true;
         buildingNameText.SetText("Street");
         buildingDescriptionText.SetText("Rats here reproduce and eat");
         buildingRatsText.SetText(Street.Instance.rats.ToString());

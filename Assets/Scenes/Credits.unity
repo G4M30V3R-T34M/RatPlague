@@ -392,7 +392,7 @@ MonoBehaviour:
   scrolls:
   - {fileID: 397634367}
   - {fileID: 546828220}
-  next: {fileID: 0}
+  next: {fileID: 2031879869}
 --- !u!1 &546828220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,6 +2057,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903254739}
   m_CullTransparentMesh: 1
+--- !u!1 &2031879869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3770059576772039109, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+  m_PrefabInstance: {fileID: 1368386737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2038678563
 GameObject:
   m_ObjectHideFlags: 0

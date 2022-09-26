@@ -35,9 +35,10 @@ public abstract class BaseBuilding : MonoBehaviour
         OnEnable();
     }
 
-    protected void ResetValues() {
+    public void ResetValues() {
         defaultColor = tileIcon.color;
         assignedRats = 0;
+        currentFood = _settings.startingFood;
     }
 
     private void OnEnable() {

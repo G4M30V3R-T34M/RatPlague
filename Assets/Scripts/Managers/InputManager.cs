@@ -42,14 +42,15 @@ public class InputManager : MonoBehaviour
     }
 
     private void PerformClick(bool isLeft, int iteration) {
-        clickAudio.Play();
         RaycastHit2D hit = Physics2D.Raycast(mainCamera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (hit) {
             BaseBuilding building = hit.collider.gameObject.GetComponent<BaseBuilding>();
             if (building != null && isLeft) {
                 building.MouseLeftClick(iteration);
+                clickAudio.Play();
             } else if (building != null) {
                 building.MouseRightClick(iteration);
+                clickAudio.Play();
             }
         }
     }
