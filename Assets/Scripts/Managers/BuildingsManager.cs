@@ -71,6 +71,7 @@ public class BuildingsManager : Singleton<BuildingsManager>
     public void CreateHouse(bool notifyCrier = true) {
         PoolableBuilding houseContainer = (PoolableBuilding)housePool.GetNext();
         House house = houseContainer.GetComponentInChildren<House>();
+        house.ResetValues();
         PlaceBuilding(houseContainer.gameObject);
         houseContainer.gameObject.SetActive(true);
         if (notifyCrier) {
@@ -82,6 +83,7 @@ public class BuildingsManager : Singleton<BuildingsManager>
     public void CreateWareHouse(bool notifyCrier = true) {
         PoolableBuilding houseContainer = (PoolableBuilding)warehousePool.GetNext();
         House warehouse = houseContainer.GetComponentInChildren<House>();
+        warehouse.ResetValues();
         PlaceBuilding(houseContainer.gameObject);
         houseContainer.gameObject.SetActive(true);
         if (notifyCrier) {
@@ -93,6 +95,7 @@ public class BuildingsManager : Singleton<BuildingsManager>
     public void CreateBarrak (bool notifyCrier = true) {
         PoolableBuilding houseContainer = (PoolableBuilding)barraksPool.GetNext();
         MilitaryBuilding barrak = houseContainer.GetComponentInChildren<MilitaryBuilding>();
+        barrak.ResetValues();
         PlaceBuilding(houseContainer.gameObject);
         houseContainer.gameObject.SetActive(true);
         if (notifyCrier) {
