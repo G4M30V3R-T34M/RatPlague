@@ -1447,11 +1447,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ships come and go from the port.
+  m_text: 'Ships come and go from the port
 
 
     Rats assigned to ships do not count
-    to the max of 100 rats.'
+    for the max of 100 rats'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
   m_sharedMaterial: {fileID: -1437902249178811484, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
@@ -1721,7 +1721,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You control a plague of rats in a medieval city. '
+  m_text: You control a plague of rats in a medieval city
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
   m_sharedMaterial: {fileID: -1437902249178811484, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
@@ -3587,11 +3587,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Rats not assigned to any building are on the streets.
+  m_text: 'Rats not assigned to any building are on the streets
 
 
     While on the
-    streets, rats eat food and reproduce.'
+    streets, rats eat food and reproduce'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
   m_sharedMaterial: {fileID: -1437902249178811484, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
@@ -3780,7 +3780,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: While assigned to a building, rats eat food from the building, infect humans
-    and generate food for the streets.
+    and generate food for the streets
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
   m_sharedMaterial: {fileID: -1437902249178811484, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
@@ -3915,7 +3915,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Left click / hold over a bulding or ship to assign rats there.
+  m_text: Left click/hold over a building or ship to assign rats there
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
   m_sharedMaterial: {fileID: -1437902249178811484, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
@@ -4631,8 +4631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 85, y: -273}
-  m_SizeDelta: {x: 430.2883, y: 108}
+  m_AnchoredPosition: {x: 96.000015, y: -273}
+  m_SizeDelta: {x: 424, y: 108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1663542643
 MonoBehaviour:
@@ -4654,7 +4654,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: If no rats assigned, street rats will be killed
+  m_text: If not enough rats assigned, street rats will be killed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
   m_sharedMaterial: {fileID: -1437902249178811484, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
@@ -5049,7 +5049,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Right click / hold over a bulding or ship to remove rats from there.
+  m_text: Right click/hold over a building or ship to remove rats from there
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
   m_sharedMaterial: {fileID: -1437902249178811484, guid: 8d6b57668dd3c5a4e8f543977204bc4b, type: 2}
@@ -5232,11 +5232,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Every day (3 seconds), all buildings are updated.
+  m_text: 'Every day (3 seconds), all buildings are updated
 
 
-    Every 10 days
-    (30 seconds) game pauses and gives a brief summary of what was happened.
+    Every 10 days (30
+    seconds) game pauses and gives a brief summary of what has happened
 
 '
   m_isRightToLeft: 0
