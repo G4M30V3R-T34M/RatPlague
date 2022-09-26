@@ -53,7 +53,7 @@ public class HUDManager : Singleton<HUDManager>
 
     public void UpdateStreetInfoHUD() {
         buildingNameText.SetText("Street");
-        buildingDescriptionText.SetText("Street description");
+        buildingDescriptionText.SetText("Rats here reproduce and eat");
         buildingRatsText.SetText(Street.Instance.rats.ToString());
         buildingFoodText.SetText(Street.Instance.food.ToString());
     }
