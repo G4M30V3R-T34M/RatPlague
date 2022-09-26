@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Feto;
 
 [RequireComponent(typeof(Collider2D))]
 public abstract class BaseBuilding : MonoBehaviour
 {
     [SerializeField] protected BaseBuildingScriptable _settings;
+    public BaseBuildingScriptable settings {
+        get { return _settings; }
+        protected set { _settings = value; } 
+    }
     
     SpriteRenderer tileIcon;
     protected new Collider2D collider;
@@ -25,10 +30,14 @@ public abstract class BaseBuilding : MonoBehaviour
     }
 
     protected virtual void Start() {
-        defaultColor = tileIcon.color;
-        assignedRats = 0;
+        ResetValues();
         executedStart = true;
         OnEnable();
+    }
+
+    protected void ResetValues() {
+        defaultColor = tileIcon.color;
+        assignedRats = 0;
     }
 
     private void OnEnable() {
@@ -38,8 +47,12 @@ public abstract class BaseBuilding : MonoBehaviour
             RatManager.Instance.AddBuilding(this);
         }
     }
+    
+    protected void DestroyBuilding() {
+        BuildingsManager.Instance.DestroyBuilding(this, _settings);
+    }
 
-    private void OnDisable() {
+    protected void OnDisable() {
         if (GameManager.Instance != null) {
             GameManager.Instance.dayDelegate -= DayAction;
             GameManager.Instance.townCrierDelegate -= TownCrierAction;

@@ -4,14 +4,24 @@ using UnityEngine;
 
 public class MilitaryBuilding : House
 {
-    public new MilitaryBuildingScriptable _settings;
+    protected MilitaryBuildingScriptable _militarySettings;
+
+    protected override void Awake() {
+        base.Awake();
+
+        if (_settings is MilitaryBuildingScriptable militarySettings) {
+            _militarySettings = militarySettings;
+        } else {
+            throw new System.Exception($"ShipSettings recieved {_settings.GetType()} instead of ShipSettingsScriptable");
+        }
+    }
     protected override void DayAction() {
         CheckMilitaryPower();
         base.DayAction();
     }
 
     protected void CheckMilitaryPower() {
-        int notDistracted = _settings.ratsNeededForDistraction - assignedRats;
+        int notDistracted = _militarySettings.ratsNeededForDistraction - assignedRats;
         if (notDistracted > 0) {
             CrierManager.Instance.deathRats += notDistracted;
             Street.Instance.Unassign(notDistracted);
