@@ -15,14 +15,14 @@ MonoBehaviour:
   buildingName: 2
   buildingDescription: Assign at leats 5 rats, or street rats will be killed
   maxRats: 20
-  ratsKilledChance: 0.01
-  startingFood: 0
-  maxFood: 300
-  minFoodGenerated: 10
-  maxFoodGenerated: 40
-  streetFoodGenerationChance: 0.15
-  humansKilledChance: 1.04
-  destructionChance: 0.02
-  ratsKilledOnDestructionChance: 0.01
+  ratsKilledChance: 0.2
+  startingFood: 10
+  maxFood: 20
+  minFoodGenerated: 5
+  maxFoodGenerated: 10
+  streetFoodGenerationChance: 0.7
+  humansKilledChance: 0.7
+  destructionChance: 0.5
+  ratsKilledOnDestructionChance: 0.5
   ColorOnMouseEnter: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
-  ratsNeededForDistraction: 10
+  ratsNeededForDistraction: 5

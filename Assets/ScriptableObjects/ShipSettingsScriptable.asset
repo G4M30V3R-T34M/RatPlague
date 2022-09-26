@@ -15,17 +15,17 @@ MonoBehaviour:
   buildingName: 3
   buildingDescription: Rats here don't count towards the max 100 rats
   maxRats: 30
-  ratsKilledChance: 1
+  ratsKilledChance: 0
   startingFood: 0
   maxFood: 0
   minFoodGenerated: 0
   maxFoodGenerated: 0
   streetFoodGenerationChance: 0
-  humansKilledChance: 5
+  humansKilledChance: 0
   destructionChance: 0
   ratsKilledOnDestructionChance: 0
   ColorOnMouseEnter: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}
   backToPortChancePerDay: 0.5
-  leavePortChancePerDay: 1
-  minHumansOnBoard: 0
-  maxHumansOnBoard: 0
+  leavePortChancePerDay: 0.5
+  minHumansOnBoard: 10
+  maxHumansOnBoard: 90

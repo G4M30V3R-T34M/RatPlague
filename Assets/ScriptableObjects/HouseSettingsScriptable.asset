@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: 0
   buildingDescription: Infects lots of humans, generates some food
-  maxRats: 20
-  ratsKilledChance: 0.2
-  startingFood: 0
-  maxFood: 500
-  minFoodGenerated: 15
-  maxFoodGenerated: 50
-  streetFoodGenerationChance: 0.3
-  humansKilledChance: 0.05
-  destructionChance: 0.05
-  ratsKilledOnDestructionChance: 0.5
+  maxRats: 25
+  ratsKilledChance: 0.05
+  startingFood: 15
+  maxFood: 40
+  minFoodGenerated: 5
+  maxFoodGenerated: 15
+  streetFoodGenerationChance: 0.5
+  humansKilledChance: 2
+  destructionChance: 0.5
+  ratsKilledOnDestructionChance: 0.1
   ColorOnMouseEnter: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}
