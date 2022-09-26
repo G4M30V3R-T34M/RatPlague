@@ -34,6 +34,11 @@ public class House : BaseBuilding
     protected void InfectHumans() {
         int infectedHumans = 0;
         for (int i = 0; i < assignedRats; i++) {
+            float chance = _settings.humansKilledChance;
+            while (chance >= 1.0f) {
+                infectedHumans++;
+                chance -= 1.0f;
+            }
             if (Random.Range(0.0f, 1.0f) < _settings.humansKilledChance ) {
                 infectedHumans++;
             }
@@ -44,17 +49,27 @@ public class House : BaseBuilding
     protected void GenerateStreetFood() {
         int generatedFood = 0;
         for (int i = 0; i < assignedRats; i++) {
-            if (Random.Range(0.0f, 1.0f) < _settings.streetFoodGenerationChance ) {
+            float chance = _settings.streetFoodGenerationChance;
+            while (chance >= 1.0f) {
+                generatedFood++;
+                chance -= 1.0f;
+            }
+            if (Random.Range(0.0f, 1.0f) < chance ) {
                 generatedFood++;
             }
         }
-        Street.Instance.food += generatedFood;
+        Street.Instance.GenerateFood(generatedFood);
     }
 
     protected void KillRats(float killChance) {
         int killedRats = 0;
         for (int i = 0; i < assignedRats; i++) {
-            if (Random.Range(0.0f, 1.0f) < killChance ) {
+            float chance = killChance;
+            while (chance >= 1.0f) {
+                killedRats++;
+                chance -= 1.0f;
+            }
+            if (Random.Range(0.0f, 1.0f) < chance ) {
                 killedRats++;
             }
         }

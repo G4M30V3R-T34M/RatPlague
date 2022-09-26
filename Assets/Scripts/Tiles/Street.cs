@@ -8,7 +8,6 @@ public class Street : Singleton<Street>
     [SerializeField] StreetScriptable _settings;
     public int food {
         get { return availableFood + generatedFood; }
-        set { generatedFood = value; }
     }
     protected int availableFood;
     protected int generatedFood;
@@ -18,8 +17,8 @@ public class Street : Singleton<Street>
 
     private void Start() {
         rats = _settings.startingRats;
-        food = _settings.startingFood;
-        availableFood = food;
+        availableFood = _settings.startingFood;
+        generatedFood = 0;
         executedStart = true;
         OnEnable();
         // Update HUD
@@ -41,6 +40,10 @@ public class Street : Singleton<Street>
             GameManager.Instance.dayDelegate -= DayAction;
             GameManager.Instance.townCrierDelegate -= TownCrierAction;
         }
+    }
+
+    public void GenerateFood(int value) {
+        generatedFood += value;
     }
 
     protected void DayAction() {
