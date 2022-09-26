@@ -14,6 +14,7 @@ public class BaseBuildingScriptable : ScriptableObject
     [Range(0.0f, 1.0f)] public float ratsKilledChance;
 
     [Header("Food Info")]
+    public int startingFood;
     public int maxFood;
     public int minFoodGenerated;
     public int maxFoodGenerated;

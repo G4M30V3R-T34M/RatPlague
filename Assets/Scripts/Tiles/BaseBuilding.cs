@@ -8,6 +8,10 @@ using Feto;
 public abstract class BaseBuilding : MonoBehaviour
 {
     [SerializeField] protected BaseBuildingScriptable _settings;
+    public BaseBuildingScriptable settings {
+        get { return _settings; }
+        protected set { _settings = value; } 
+    }
     
     SpriteRenderer tileIcon;
     protected new Collider2D collider;
@@ -20,19 +24,20 @@ public abstract class BaseBuilding : MonoBehaviour
 
     private Coroutine UpdateBuildingHUDCoroutine;
 
-    private PoolableBuilding poolableBuilding;
-
     protected virtual void Awake() {
         tileIcon = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
-        poolableBuilding = GetComponentInParent<PoolableBuilding>();
     }
 
     protected virtual void Start() {
-        defaultColor = tileIcon.color;
-        assignedRats = 0;
+        ResetValues();
         executedStart = true;
         OnEnable();
+    }
+
+    protected void ResetValues() {
+        defaultColor = tileIcon.color;
+        assignedRats = 0;
     }
 
     private void OnEnable() {
@@ -43,7 +48,7 @@ public abstract class BaseBuilding : MonoBehaviour
         }
     }
     
-    protected void Destroy() {
+    protected void DestroyBuilding() {
         BuildingsManager.Instance.DestroyBuilding(this, _settings);
     }
 

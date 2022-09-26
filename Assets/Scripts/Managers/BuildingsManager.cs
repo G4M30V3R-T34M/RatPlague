@@ -15,10 +15,57 @@ public class BuildingsManager : Singleton<BuildingsManager>
         currentBuildings = new List<BaseBuilding>();
     }
 
-    public void CreateBuilding() {
-        // Decide what type of building
-        // Call method of given type
+    public void CreateStartingBuildings() {
+        CreateHouse(false);
+        CreateWareHouse(false);
 
+        if (Random.Range(0,2) == 0) {
+            CreateHouse(false);
+        } else {
+            CreateWareHouse(false);
+        }
+    }
+
+    public void CreateCrierBuildings() {
+        int houses = 0, warehouses = 0, barraks = 0;
+        CountCurrentBuilidngs(ref houses, ref warehouses, ref barraks);
+
+        if (houses == 0) { CreateHouse(); }
+        if (warehouses == 0) { CreateWareHouse(); }
+
+        if (Random.Range(0.0f, 1.0f) < _settings.spawnChance) {
+            CreateRandomBuilding();
+        }
+    }
+
+    protected void CountCurrentBuilidngs(ref int houses, ref int warehouses, ref int barraks) {
+        for (int i = 0; i < currentBuildings.Count; i++) {
+            switch (currentBuildings[i].settings.buildingName) {
+                case Buildings.House:
+                    houses++;
+                    break;
+                case Buildings.Warehouse:
+                    warehouses++;
+                    break;
+                case Buildings.Military:
+                    barraks++;
+                    break;
+            }
+        }
+    }
+
+    protected void CreateRandomBuilding(bool notifyCrier = true) {
+        switch ((Buildings) Random.Range(0, 3)) {
+            case Buildings.House:
+                CreateHouse(notifyCrier);
+                break;
+            case Buildings.Warehouse:
+                CreateWareHouse(notifyCrier);
+                break;
+            case Buildings.Military:
+                CreateBarrak(notifyCrier);
+                break;
+        }
     }
 
     public void CreateHouse(bool notifyCrier = true) {

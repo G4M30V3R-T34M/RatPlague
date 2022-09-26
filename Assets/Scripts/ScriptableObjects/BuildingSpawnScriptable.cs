@@ -10,6 +10,11 @@ public class BuildingSpawnScriptable : ScriptableObject
     public float maxX;
     public float minY;
     public float maxY;
+
+    [Header("Spawn Distance")]
     public float xDist;
     public float yDist;
+
+    [Header("Spawn Chances")]
+    public float spawnChance;
 }

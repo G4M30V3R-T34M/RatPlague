@@ -15,11 +15,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start() {
         iterations = 0;
-
-        // TODO: Create Buildings
-        BuildingsManager.Instance.CreateHouse(false);
-        BuildingsManager.Instance.CreateWareHouse(false);
-        BuildingsManager.Instance.CreateBarrak(false);
+        BuildingsManager.Instance.CreateStartingBuildings();
 
         UpdateGameState(GameStates.Play);
     }
@@ -35,6 +31,7 @@ public class GameManager : Singleton<GameManager>
                 if (townCrierDelegate != null) { townCrierDelegate(); };
                 iterations++;
                 if (iterations < _settings.totalIterations) {
+                    BuildingsManager.Instance.CreateCrierBuildings();
                     CrierManager.Instance.DisplayInfo();
                 } else {
                     EndGameManager.Instance.EndGame(GameOverCondition.Quarantine);
