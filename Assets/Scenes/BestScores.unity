@@ -327,6 +327,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+--- !u!1 &460742378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3770059576735233983, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+  m_PrefabInstance: {fileID: 460742377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &460742379 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3770059576735233969, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
+  m_PrefabInstance: {fileID: 460742377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460742378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &460742380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460742378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:11e44ed4ac3184d478b5f6ac270cfdb3
+    m_TableEntryReference:
+      m_KeyId: 8796492754944
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 460742379}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!224 &595738052 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3770059576772039108, guid: 72f8d8b1fc3451f4f863df6e86d8ce9f, type: 3}
@@ -766,6 +822,7 @@ GameObject:
   - component: {fileID: 1142292230}
   - component: {fileID: 1142292232}
   - component: {fileID: 1142292231}
+  - component: {fileID: 1142292233}
   m_Layer: 5
   m_Name: SceneTitle
   m_TagString: Untagged
@@ -790,8 +847,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2, y: 0.8}
   m_AnchorMax: {x: 0.8, y: 0.95}
-  m_AnchoredPosition: {x: 1.5744934, y: -332.57626}
-  m_SizeDelta: {x: 656.7776, y: -7.212158}
+  m_AnchoredPosition: {x: 1.5744934, y: -350.4373}
+  m_SizeDelta: {x: 564.4957, y: -7.2122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142292231
 MonoBehaviour:
@@ -890,6 +947,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142292229}
   m_CullTransparentMesh: 1
+--- !u!114 &1142292233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142292229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:f7cb8c840bf87d24cbd5e17c2ad2e032
+    m_TableEntryReference:
+      m_KeyId: 63301709824
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1142292231}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1173800792
 PrefabInstance:
   m_ObjectHideFlags: 0
