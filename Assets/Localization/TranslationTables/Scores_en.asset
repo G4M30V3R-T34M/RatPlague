@@ -22,6 +22,10 @@ MonoBehaviour:
     m_Localized: Best Scores
     m_Metadata:
       m_Items: []
+  - m_Id: 759474441908224
+    m_Localized: PLAYER SCORE
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

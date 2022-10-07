@@ -53,6 +53,14 @@ MonoBehaviour:
     m_Key: resume
     m_Metadata:
       m_Items: []
+  - m_Id: 769809676726272
+    m_Key: play_again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 769993399824384
+    m_Key: main_menu
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

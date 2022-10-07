@@ -10,20 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: Scores_es
+  m_Name: GameOver_es
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: es
-  m_SharedData: {fileID: 11400000, guid: f7cb8c840bf87d24cbd5e17c2ad2e032, type: 2}
+  m_SharedData: {fileID: 11400000, guid: b3718547f5dd5b141bca748832532b7f, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 63301709824
-    m_Localized: Mejores Puntuaciones
+  - m_Id: 198614151168
+    m_Localized: La ciudad ha entrado en cuarentena
     m_Metadata:
       m_Items: []
-  - m_Id: 759474441908224
-    m_Localized: "PUNTUACI\xD3N"
+  - m_Id: 151080103936
+    m_Localized: La plaga ha crecido demasiado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104208756736
+    m_Localized: Han muerto todas las ratas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1440576925696
+    m_Localized: Tu nombre...
     m_Metadata:
       m_Items: []
   references:

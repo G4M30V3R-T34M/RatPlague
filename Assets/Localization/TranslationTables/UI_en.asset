@@ -54,6 +54,14 @@ MonoBehaviour:
     m_Localized: Resume
     m_Metadata:
       m_Items: []
+  - m_Id: 769809676726272
+    m_Localized: Play again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 769993399824384
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

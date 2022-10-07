@@ -54,6 +54,14 @@ MonoBehaviour:
     m_Localized: Continuar
     m_Metadata:
       m_Items: []
+  - m_Id: 769809676726272
+    m_Localized: Jugar de nuevo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 769993399824384
+    m_Localized: "Men\xFA Principal"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
