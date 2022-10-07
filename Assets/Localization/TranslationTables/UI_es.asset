@@ -42,6 +42,10 @@ MonoBehaviour:
     m_Localized: Siguiente
     m_Metadata:
       m_Items: []
+  - m_Id: 699233926868992
+    m_Localized: Anterior
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

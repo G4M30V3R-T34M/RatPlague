@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 116397404160
-    m_Localized: Game
+    m_Localized: GAME
     m_Metadata:
       m_Items: []
   - m_Id: 243199602688
@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 627628535808
-    m_Localized: Goal
+    m_Localized: GOAL
     m_Metadata:
       m_Items: []
   - m_Id: 775909765120
