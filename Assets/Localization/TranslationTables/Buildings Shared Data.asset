@@ -10,57 +10,59 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: UI Shared Data
+  m_Name: Buildings Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: UI
-  m_TableCollectionNameGuidString: 11e44ed4ac3184d478b5f6ac270cfdb3
+  m_TableCollectionName: Buildings
+  m_TableCollectionNameGuidString: 99e64b6b98d4f7a44822754fa65a4dae
   m_Entries:
-  - m_Id: 2559222968320
-    m_Key: 'play
-
-'
+  - m_Id: 86785617920
+    m_Key: barrack_description
     m_Metadata:
       m_Items: []
-  - m_Id: 5109393354752
-    m_Key: tutorial
+  - m_Id: 171846103040
+    m_Key: house_description
     m_Metadata:
       m_Items: []
-  - m_Id: 5298015399936
-    m_Key: scores
+  - m_Id: 1070345711616
+    m_Key: warehouse_description
     m_Metadata:
       m_Items: []
-  - m_Id: 5479775563776
-    m_Key: credits
+  - m_Id: 2108620500992
+    m_Key: ship_description
     m_Metadata:
       m_Items: []
-  - m_Id: 8796492754944
-    m_Key: back
+  - m_Id: 6402237231104
+    m_Key: House
     m_Metadata:
       m_Items: []
-  - m_Id: 8997668352000
-    m_Key: next
+  - m_Id: 6417970065408
+    m_Key: Warehouse
     m_Metadata:
       m_Items: []
-  - m_Id: 699233926868992
-    m_Key: prev
+  - m_Id: 6438794784768
+    m_Key: Military
     m_Metadata:
       m_Items: []
-  - m_Id: 754833285148672
-    m_Key: start
+  - m_Id: 6456914178048
+    m_Key: Ship
     m_Metadata:
       m_Items: []
-  - m_Id: 766967796690944
-    m_Key: resume
+  - m_Id: 17406308347904
+    m_Key: Street
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17449471930368
+    m_Key: street_description
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 2156696577585184792
+    rid: 2156696577585184844
   references:
     version: 2
     RefIds:
-    - rid: 2156696577585184792
+    - rid: 2156696577585184844
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1664960348917
+        m_CustomEpoch: 1665133970481

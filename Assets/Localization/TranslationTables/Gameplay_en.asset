@@ -10,48 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: UI_es
+  m_Name: Gameplay_en
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: es
-  m_SharedData: {fileID: 11400000, guid: 11e44ed4ac3184d478b5f6ac270cfdb3, type: 2}
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 9f3a6d9fece262c4184f6949122c1bfe, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 2559222968320
-    m_Localized: Jugar
+  - m_Id: 64706801664
+    m_Localized: Day
     m_Metadata:
       m_Items: []
-  - m_Id: 5109393354752
-    m_Localized: Tutorial
+  - m_Id: 29422876061696
+    m_Localized: 'Assign rats to Buildings
+
+      Press Start when ready to begin'
     m_Metadata:
       m_Items: []
-  - m_Id: 5298015399936
-    m_Localized: "Puntuaci\xF3n"
+  - m_Id: 30717263441920
+    m_Localized: 'Assign rats to new Buildings
+
+      Press Next to resume game'
     m_Metadata:
       m_Items: []
-  - m_Id: 5479775563776
-    m_Localized: Creditos
+  - m_Id: 34344002613248
+    m_Localized: Summary
     m_Metadata:
       m_Items: []
-  - m_Id: 8796492754944
-    m_Localized: "Atr\xE1s"
+  - m_Id: 34784018657280
+    m_Localized: Born rats
     m_Metadata:
       m_Items: []
-  - m_Id: 8997668352000
-    m_Localized: Siguiente
+  - m_Id: 34981020921856
+    m_Localized: Death rats
     m_Metadata:
       m_Items: []
-  - m_Id: 699233926868992
-    m_Localized: Anterior
-    m_Metadata:
-      m_Items: []
-  - m_Id: 754833285148672
-    m_Localized: Empezar
-    m_Metadata:
-      m_Items: []
-  - m_Id: 766967796690944
-    m_Localized: Continuar
+  - m_Id: 40743281586176
+    m_Localized: Pause
     m_Metadata:
       m_Items: []
   references:

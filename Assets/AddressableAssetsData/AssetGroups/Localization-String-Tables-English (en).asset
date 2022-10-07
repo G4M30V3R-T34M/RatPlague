@@ -41,6 +41,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     - Preload
+  - m_GUID: 753ac1fe06dc24f4aa65eeffb6a143f3
+    m_Address: Gameplay_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: 0ae1771af7fb60341a1f8b542c9218a4
+    m_Address: Buildings_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: c986cb1e1cbe20f478900c2e442e217c, type: 2}
   m_SchemaSet:

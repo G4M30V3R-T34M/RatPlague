@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 
 [CreateAssetMenu(fileName = "BaseBuildingScriptable", menuName = "Scriptables/BaseBuildingScriptable", order = 2)]
 public class BaseBuildingScriptable : ScriptableObject
 {
     [Header("General Info")]
     public Buildings buildingName;
-    public string buildingDescription;
+    public LocalizedString buildingDescription;
 
     [Header("Rats Info")]
     public int maxRats;

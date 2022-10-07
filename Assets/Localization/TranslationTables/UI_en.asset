@@ -46,6 +46,14 @@ MonoBehaviour:
     m_Localized: Prev.
     m_Metadata:
       m_Items: []
+  - m_Id: 754833285148672
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 766967796690944
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

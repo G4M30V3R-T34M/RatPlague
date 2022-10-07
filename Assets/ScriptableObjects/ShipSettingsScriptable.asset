@@ -13,7 +13,15 @@ MonoBehaviour:
   m_Name: ShipSettingsScriptable
   m_EditorClassIdentifier: 
   buildingName: 3
-  buildingDescription: Rats here don't count towards the max 100 rats
+  buildingDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:99e64b6b98d4f7a44822754fa65a4dae
+    m_TableEntryReference:
+      m_KeyId: 2108620500992
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   maxRats: 30
   ratsKilledChance: 0
   startingFood: 0
@@ -29,3 +37,6 @@ MonoBehaviour:
   leavePortChancePerDay: 0.5
   minHumansOnBoard: 10
   maxHumansOnBoard: 90
+  references:
+    version: 2
+    RefIds: []

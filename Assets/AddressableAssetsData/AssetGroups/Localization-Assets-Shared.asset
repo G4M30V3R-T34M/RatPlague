@@ -33,6 +33,14 @@ MonoBehaviour:
     m_Address: Assets/Localization/TranslationTables/Tutorial Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: 9f3a6d9fece262c4184f6949122c1bfe
+    m_Address: Assets/Localization/TranslationTables/Gameplay Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 99e64b6b98d4f7a44822754fa65a4dae
+    m_Address: Assets/Localization/TranslationTables/Buildings Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: c986cb1e1cbe20f478900c2e442e217c, type: 2}
   m_SchemaSet:

@@ -13,7 +13,15 @@ MonoBehaviour:
   m_Name: HouseSettingsScriptable
   m_EditorClassIdentifier: 
   buildingName: 0
-  buildingDescription: Infects lots of humans, generates some food
+  buildingDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:99e64b6b98d4f7a44822754fa65a4dae
+    m_TableEntryReference:
+      m_KeyId: 171846103040
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   maxRats: 25
   ratsKilledChance: 0.05
   startingFood: 15
@@ -25,3 +33,6 @@ MonoBehaviour:
   destructionChance: 0.5
   ratsKilledOnDestructionChance: 0.1
   ColorOnMouseEnter: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}
+  references:
+    version: 2
+    RefIds: []
