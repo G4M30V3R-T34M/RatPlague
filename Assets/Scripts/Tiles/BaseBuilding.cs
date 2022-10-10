@@ -8,7 +8,7 @@ using Feto;
 public abstract class BaseBuilding : MonoBehaviour
 {
     [SerializeField] protected BaseBuildingScriptable _settings;
-    [SerializeField] UpdateBuildingCanvas canvas;
+    [SerializeField] protected UpdateBuildingCanvas canvas;
     public BaseBuildingScriptable settings {
         get { return _settings; }
         protected set { _settings = value; } 

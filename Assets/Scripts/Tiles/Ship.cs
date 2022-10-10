@@ -41,6 +41,7 @@ public class Ship : BaseBuilding
         CheckHumansInfected();
         CrierManager.Instance.deathRats += assignedRats;
         assignedRats = 0;
+        base.canvas.UpdateBuildingOccupation();
     }
 
     public void ShipArrivePortEnd() {
