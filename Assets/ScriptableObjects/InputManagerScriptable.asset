@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee904e069c0da24fb86d8bda8c5fbbf, type: 3}
   m_Name: InputManagerScriptable
   m_EditorClassIdentifier: 
-  startAssignTime: 0.7
+  startAssignTime: 0.4
   minTimeAssign: 0.1
   decrementTimeAssign: 0.15
