@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Feto;
+using UnityEngine.Localization;
 
 [RequireComponent(typeof(Collider2D))]
 public abstract class BaseBuilding : MonoBehaviour
@@ -76,8 +77,9 @@ public abstract class BaseBuilding : MonoBehaviour
     }
 
     private void DisplayBuildingInfo() {
-        HUDManager.Instance.buildingName = _settings.buildingName.ToString();
-        HUDManager.Instance.buildingDescription = _settings.buildingDescription;
+        LocalizedString tmp = new LocalizedString("Buildings", _settings.buildingName.ToString());
+        HUDManager.Instance.buildingName = tmp.GetLocalizedString();
+        HUDManager.Instance.buildingDescription = _settings.buildingDescription.GetLocalizedString();
         HUDManager.Instance.buildingCurrentRats = assignedRats;
         HUDManager.Instance.buildingMaxRats = _settings.maxRats;
         HUDManager.Instance.buildingFood = currentFood;

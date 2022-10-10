@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Buildings_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 99e64b6b98d4f7a44822754fa65a4dae, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 86785617920
+    m_Localized: Assign at leats 5 rats, or street rats will be killed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 171846103040
+    m_Localized: Infects lots of humans, generates some food
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1070345711616
+    m_Localized: Generates high levels of food, but only infects a little
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2108620500992
+    m_Localized: Rats here don't count towards the max 100 rats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6402237231104
+    m_Localized: House
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6417970065408
+    m_Localized: Warehouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6438794784768
+    m_Localized: Military
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6456914178048
+    m_Localized: Ship
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17406308347904
+    m_Localized: Street
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17449471930368
+    m_Localized: Rats here reproduce and eat
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

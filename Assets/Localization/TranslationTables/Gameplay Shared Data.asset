@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Gameplay Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Gameplay
+  m_TableCollectionNameGuidString: 9f3a6d9fece262c4184f6949122c1bfe
+  m_Entries:
+  - m_Id: 64706801664
+    m_Key: HUD_day
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29422876061696
+    m_Key: HUD_crier_init
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30717263441920
+    m_Key: C_assign
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34344002613248
+    m_Key: C_summary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34784018657280
+    m_Key: C_born
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34981020921856
+    m_Key: C_death
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40743281586176
+    m_Key: P_title
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2156696577585184843
+  references:
+    version: 2
+    RefIds:
+    - rid: 2156696577585184843
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1665133449200

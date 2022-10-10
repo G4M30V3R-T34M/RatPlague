@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization;
 
 public class HUDManager : Singleton<HUDManager>
 {
@@ -33,6 +35,9 @@ public class HUDManager : Singleton<HUDManager>
     public int buildingFood;
 
     public bool StreetSelected = true;
+
+    [SerializeField] LocalizedString street_name;
+    [SerializeField] LocalizedString street_description;
 
     private void Start() {
         GameManager.Instance.dayDelegate += UpdateStreetData;
@@ -73,8 +78,8 @@ public class HUDManager : Singleton<HUDManager>
 
     public void UpdateStreetInfoHUD() {
         StreetSelected = true;
-        buildingNameText.SetText("Street");
-        buildingDescriptionText.SetText("Rats here reproduce and eat");
+        buildingNameText.SetText(street_name.GetLocalizedString());
+        buildingDescriptionText.SetText(street_description.GetLocalizedString());
         buildingRatsText.SetText(Street.Instance.rats.ToString());
         buildingFoodText.SetText(Street.Instance.food.ToString());
     }

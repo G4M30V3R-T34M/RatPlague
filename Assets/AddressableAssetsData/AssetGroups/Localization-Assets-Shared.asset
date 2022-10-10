@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d5eb0e8901ad062439b2f0ddcaeb358a
+  m_SerializeEntries:
+  - m_GUID: 11e44ed4ac3184d478b5f6ac270cfdb3
+    m_Address: Assets/Localization/New Table Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: f69d0be3dfa97944385e2912c2f4ef82
+    m_Address: Assets/Localization/Credits Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: f7cb8c840bf87d24cbd5e17c2ad2e032
+    m_Address: Assets/Localization/TranslationTables/Scores Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: f495b266756c6d14ba865f263ef211c8
+    m_Address: Assets/Localization/TranslationTables/Tutorial Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 9f3a6d9fece262c4184f6949122c1bfe
+    m_Address: Assets/Localization/TranslationTables/Gameplay Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 99e64b6b98d4f7a44822754fa65a4dae
+    m_Address: Assets/Localization/TranslationTables/Buildings Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: b3718547f5dd5b141bca748832532b7f
+    m_Address: Assets/Localization/TranslationTables/GameOver Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: c986cb1e1cbe20f478900c2e442e217c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 2810bb03fd58a6d4dbb267acf8feb18d, type: 2}
+    - {fileID: 11400000, guid: c1e3196bc017ce84d9ae4cf027799f09, type: 2}
