@@ -9,6 +9,7 @@ using UnityEngine.Localization;
 public abstract class BaseBuilding : MonoBehaviour
 {
     [SerializeField] protected BaseBuildingScriptable _settings;
+    [SerializeField] protected UpdateBuildingCanvas canvas;
     public BaseBuildingScriptable settings {
         get { return _settings; }
         protected set { _settings = value; } 
@@ -49,6 +50,7 @@ public abstract class BaseBuilding : MonoBehaviour
             if(_settings.buildingName != Buildings.Ship) {
                 RatManager.Instance.AddBuilding(this);
             }
+            canvas.UpdateBuildingOccupation();
         }
     }
     
@@ -103,6 +105,7 @@ public abstract class BaseBuilding : MonoBehaviour
             Street.Instance.Unassign(ratsToAssign);
         }
         DisplayBuildingInfo();
+        canvas.UpdateBuildingOccupation();
     }
 
     public void MouseRightClick(int iteration) {
@@ -112,6 +115,7 @@ public abstract class BaseBuilding : MonoBehaviour
             Street.Instance.Assign(ratsToUnassign);
         }
         DisplayBuildingInfo();
+        canvas.UpdateBuildingOccupation();
     }
 
     public float GetRatOccupationRatio() {

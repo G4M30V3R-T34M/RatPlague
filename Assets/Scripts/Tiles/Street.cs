@@ -15,6 +15,9 @@ public class Street : Singleton<Street>
 
     private bool executedStart = false;
 
+    public delegate void UpdateOccupation();
+    public event UpdateOccupation updateOccupation;
+
     private void Start() {
         rats = _settings.startingRats;
         availableFood = _settings.startingFood;
@@ -26,6 +29,7 @@ public class Street : Singleton<Street>
         HUDManager.Instance.totalFood = food;
         HUDManager.Instance.UpdateGeneralInfoHUD();
         HUDManager.Instance.UpdateStreetInfoHUD();
+        updateOccupation();
     }
 
     protected void OnEnable() {
@@ -50,6 +54,7 @@ public class Street : Singleton<Street>
         FeedRats();
         ReproduceRats();
         StartCoroutine(UpdateAvailableFood());
+        updateOccupation();
     }
 
     protected void FeedRats() {
@@ -88,11 +93,13 @@ public class Street : Singleton<Street>
 
     public void Assign(int ratsToAssign) {
         rats += ratsToAssign;
+        updateOccupation();
     }
 
     public void Unassign(int ratsToUnassign) {
         rats -= ratsToUnassign;
         rats = Mathf.Clamp(rats, 0, 100);
+        updateOccupation();
     }
 
 }
