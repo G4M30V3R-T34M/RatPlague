@@ -25,14 +25,14 @@ MonoBehaviour:
   - m_Id: 29422876061696
     m_Localized: 'Asigna ratas a edificios
 
-      Apreta Empezar cuando estes listo
+      Pulsa Empezar cuando estes listo
       para empezar'
     m_Metadata:
       m_Items: []
   - m_Id: 30717263441920
     m_Localized: 'Asigna ratas a edificios
 
-      Apreta Siguiente para continuar
+      Pulsa Siguiente para continuar
       con el juego'
     m_Metadata:
       m_Items: []
